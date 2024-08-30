@@ -1,32 +1,54 @@
+"use client"
+
 import React from 'react'
-import styles from './_popularItems.module.scss'
 import Title from '@/Component/global/Title/Title'
 import CardItem from '@/Component/global/CardItem/CardItem'
+import { SwiperSlide, Swiper, } from 'swiper/react'
+import { Navigation, Pagination, Mousewheel, Keyboard, A11y } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import styles from './_popularItems.module.scss'
+
 
 function PopularItems() {
     return (
         <section className={styles.popular}>
-            <Title value='popular articles' />
-            <ul className={styles.wrapperItems}>
-                <li>
+            <div className={styles.title}>
+                <Title value='popular articles' />
+            </div>
+            <Swiper
+                className={styles.wrapperAll}
+                cssMode={true}
+                slidesPerView={'auto'}
+                navigation={true}
+                pagination={{ clickable: true }}
+                mousewheel={true}
+                keyboard={true}
+                // a11y={true}
+                modules={[Navigation, Pagination, Mousewheel, Keyboard, A11y]}
+                
+                >
+                <SwiperSlide className={styles.wrapperItems}>
                     <CardItem src='' />
-                </li>
-                <li>
+                </SwiperSlide >
+                <SwiperSlide className={styles.wrapperItems}>
                     <CardItem src='' />
-                </li>
-                <li>
+                </SwiperSlide ><SwiperSlide className={styles.wrapperItems}>
                     <CardItem src='' />
-                </li>
-                <li>
+                </SwiperSlide><SwiperSlide className={styles.wrapperItems}>
                     <CardItem src='' />
-                </li>
-                <li>
+                </SwiperSlide>
+                <SwiperSlide className={styles.wrapperItems}>
                     <CardItem src='' />
-                </li>
-                <li>
+                </SwiperSlide>
+                <SwiperSlide className={styles.wrapperItems}>
                     <CardItem src='' />
-                </li>
-            </ul>
+                </SwiperSlide><SwiperSlide className={styles.wrapperItems}>
+                    <CardItem src='' />
+                </SwiperSlide>
+            </Swiper>
         </section>
     )
 }

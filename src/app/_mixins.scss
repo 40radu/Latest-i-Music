@@ -6,7 +6,7 @@ $black-15 : rgba(0, 0, 0, 0.15);
 $black-25 : rgba(0, 0, 0, 0.25);
 $black-50 : rgba(0, 0, 0, 0.50);
 $black-75 : rgba(0, 0, 0, 0.75);
-$black-secondary : #2C2C2C;
+$black-secondary : rgba(49, 39, 39, 0.82);
 $gray : #D9D9D9;
 
 @function text-space ($sizeValue, $valueP) {
@@ -19,3 +19,4 @@ $gray : #D9D9D9;
     align-items: $items;
     flex-direction: $direction;
 }
+

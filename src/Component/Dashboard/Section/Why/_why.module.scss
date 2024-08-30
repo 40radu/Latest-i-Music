@@ -1,0 +1,19 @@
+@import '../../../../app/mixins';
+
+.wrapperWhy {
+    width: 100%;
+    padding: 50px 150px;
+    @include flex (center, start, column);
+    row-gap: 50px;
+
+
+    ul {
+        width: 100%;
+        @include flex (space-between, center, row);
+
+        @media (min-width : 1441px) {
+            column-gap: 100px;
+            justify-content: center;
+        }
+    }
+}

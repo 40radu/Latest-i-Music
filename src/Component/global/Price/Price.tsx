@@ -9,10 +9,10 @@ interface IPrice {
 
 function Price( {value} : IPrice) {
   return (
-    <div className={styles.price}>
+    <section className={styles.price}>
         <Image src={PriceIc} alt='logo price'/>
         <p>{value} £</p>
-    </div>
+    </section>
   )
 }
 

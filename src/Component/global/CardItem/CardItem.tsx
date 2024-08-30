@@ -13,7 +13,7 @@ function CardItem({ src }: ICardItem) {
     return (
         <section className={styles.wrapper_card}>
             <Image src={exoImg} alt='' />
-            <TitleCard value='bob' />
+            <TitleCard value='bass guitar' />
             <Price value='385'/>
             <Button className='primary' value='Add to the cart'/>
         </section>

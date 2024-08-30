@@ -1,1 +1,37 @@
 @import '../../../../app/mixins';
+
+.popular {
+    width: 100%;
+    height: fit-content;
+    // padding: 0 50px;
+    overflow: visible;
+    background-color: transparent;
+
+
+    .title {
+        padding-left: 150px;
+    }
+
+    .wrapperAll {
+        width: 100%;
+        padding-bottom: 20px;
+        background-color: transparent;
+        // padding-left: 150px;    
+
+        div {
+            padding: 0 50px;
+            color: $black-25;
+            outline: none;
+        }
+
+        .wrapperItems {
+            padding: 50px;
+            padding-left: 150px;
+            width: fit-content;
+        }
+    }
+
+
+
+
+}

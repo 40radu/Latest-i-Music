@@ -1,0 +1,11 @@
+@import '../../../../app/mixins';
+
+.opinion {
+    width: 100%;
+    background-image: url("/Image/Dashboard/opinion.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex (center , center, row);
+    padding: 80px 0;
+    column-gap: 20px;
+}
