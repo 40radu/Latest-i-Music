@@ -1,0 +1,39 @@
+@import '../../../app/mixins';
+
+.card_container {
+    width: 358px;
+    height: fit-content;
+    padding: 15px;
+    @include flex (center, start, column);
+    row-gap: 10px;
+    background-color: $white;
+    border-radius: 2px;
+    position: relative;
+
+    .descri {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: text-space(16, 4);
+        color: $black-40;
+    }
+
+    &:hover {   
+        scale: 1.01;
+
+        img {
+            filter: blur(1px);
+        }
+
+        button{
+            display: flex;
+        }
+    }
+
+    button {
+        display: none;
+        position: absolute;
+        left: 20%;
+        right: 20%;
+    }
+}

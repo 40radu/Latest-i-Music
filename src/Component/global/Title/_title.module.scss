@@ -1,0 +1,23 @@
+@import '../../../app/mixins';
+
+.title_wrapper {
+    width: 100%;
+    height: fit-content;
+    @include flex (start , start, column);
+
+    h2 {
+        font-size: 58px;
+        font-weight: 800;
+        letter-spacing: text-space(58,8);
+        color: $black-40;
+        text-transform: uppercase;
+    }
+
+    &::after {
+        content: "";
+        width: 67px;
+        height: 11px;
+        border-radius: 0 0 0 20px;
+        background-color: $red;
+    }
+}

@@ -1,0 +1,24 @@
+@import '../../../app/mixins';
+
+.primary {
+    padding: 15px 60px;
+    background-color: $red;
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: text-space(16,6);
+    border-radius: 2px;
+    border: 1px $red solid;
+}
+
+.secondary {
+    @extend .primary;
+    border: 1px solid $white;
+    background-color: transparent;
+}
+
+.third {
+    @extend .secondary;
+    color: $black-50;
+    border-color: $black-25;
+}

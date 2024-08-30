@@ -1,0 +1,15 @@
+@import '../../../app/mixins';
+
+.price {
+    @include flex (start, center , row);
+    width: fit-content;
+    height: fit-content;
+    column-gap: 18px;
+
+    p {
+        font-size: 21px;
+        font-weight: 800;
+        color: $black-40;
+        letter-spacing: text-space (21,8);
+    }
+}

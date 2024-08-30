@@ -1,0 +1,9 @@
+@import '../../../app/mixins';
+
+.link {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: text-space(16,14);
+    text-transform: uppercase;
+    color: $black-40;
+}

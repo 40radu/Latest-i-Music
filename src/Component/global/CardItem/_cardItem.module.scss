@@ -1,0 +1,10 @@
+@import '../../../app/mixins';
+
+.wrapper_card {
+    width: 358px;
+    height: fit-content;
+    padding: 20px;
+    @include flex (start , start , column);
+    row-gap: 10px;
+    box-shadow: 0 0 60px $black-15;
+}

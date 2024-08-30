@@ -1,0 +1,11 @@
+@import '../../../app/mixins';
+
+.title {
+    width: 100%;
+    height: fit-content;
+    font-size: 21px;
+    font-weight: 800;
+    color: $black-40;
+    text-transform: uppercase;
+    letter-spacing: text-space(21,8);
+}

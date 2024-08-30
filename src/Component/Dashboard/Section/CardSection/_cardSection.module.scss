@@ -1,0 +1,16 @@
+@import '../../../../app/mixins';
+
+.wrapper {
+    @include flex(center, center, row);
+
+    .cardSection {
+        width: fit-content;
+        position: relative;
+        @include flex (center, center, row);
+        column-gap: 10px;
+        position: relative;
+        bottom: 110px;
+        background-color: #F5F5F7;
+        box-shadow: 0 6px 50px $black-25;
+    }
+}
