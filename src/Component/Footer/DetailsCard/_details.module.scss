@@ -1,0 +1,28 @@
+@import '../../../app/mixins';
+
+.details_card {
+    width: fit-content;
+    height: fit-content;
+    @include flex(start, start , row);
+    column-gap: 25px;
+
+    .text_zone {
+        @include flex(start, start,column);
+        row-gap: 6px;
+        h6 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: text-space(20,8);
+            text-transform: uppercase;
+            color: $white;
+        }
+
+        .descri {
+            font-style: 10px;
+            font-weight: 700;
+            letter-spacing: text-space(10,8);
+            text-transform: capitalize;
+            color: $black-secondary;
+        }
+    }
+}

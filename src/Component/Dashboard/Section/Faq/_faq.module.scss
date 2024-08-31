@@ -1,0 +1,11 @@
+@import '../../../../app/mixins';
+
+.faqSection{
+    padding: 50px 150px 80px;
+    @include flex (start , center, column);
+    row-gap: 20px;
+
+    ul {
+        width: 100%;
+    }
+}

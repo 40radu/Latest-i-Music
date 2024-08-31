@@ -1,0 +1,30 @@
+@import '../../../../app/mixins';
+
+
+.locationWrapper {
+    width: 100%;
+    height: fit-content;
+    @include flex(end, center, row);
+    padding: 20px 40px 20px 0;
+    background-image: url('/Image/Dashboard/location.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        width: fit-content;
+        height: fit-content;
+        padding: 40px 35px;
+        background-color: $gray;
+        @include flex (start, start, column);
+        row-gap: 42px;
+        border-radius: 2px;
+        box-shadow: 8px 0 0 $black-25;
+
+
+        .wrapperInfo {
+            @include flex (space-between, center, row);
+            width: 511px;
+            height: fit-content;
+        }
+    }
+}
