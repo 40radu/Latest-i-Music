@@ -23,7 +23,7 @@ function History() {
                     <Button className='primary' value='About us' />
                 </div>
 
-                <Image src={imageHistory} alt='' />
+                <Image src={imageHistory} alt='' className={styles.image}/>
             </div>
         </section>
     )

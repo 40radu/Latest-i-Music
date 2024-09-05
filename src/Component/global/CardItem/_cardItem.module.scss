@@ -3,8 +3,36 @@
 .wrapper_card {
     width: 358px;
     height: fit-content;
-    padding: 20px;
-    @include flex (start , start , column);
+    padding: 15px;
+    @include flex (start , center , column);
     row-gap: 10px;
     box-shadow: 0 0 60px $black-15;
+
+    @include media_tab_portrait {
+        width: 310px;
+    }
+
+    .image {
+        width: 100%;
+        height: 275px;
+        border-radius: 2px;
+    }
+
+    .info {
+        @include flex (center, center,column);
+        row-gap: 2px;
+        .descri {
+            font-size: 14px ;
+            font-weight: 500;
+            letter-spacing: text-space(14,8);
+            color: $black;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .in_stock {
+            @extend .descri;
+            color: #57E040;
+        }
+    }
 }

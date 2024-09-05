@@ -5,9 +5,9 @@ import Button from '@/Component/global/Button/page'
 function Hero() {
     return (
         <section className={styles.hero} >
-            <h1>Do you need a new guitare ?</h1>
+            <h1>Hey !  would you like to buy a new guitar?</h1>
             <p className={styles.descri}>
-            If you're looking for a musical instrument, if it's a stringed instrument, you've come to the right place!
+                If you're looking for a musical instrument, if it's a stringed instrument, you've come to the right place!
 
             </p>
             <div className={styles.banner_button}>

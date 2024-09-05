@@ -6,10 +6,12 @@ function Location() {
     return (
         <section className={styles.locationWrapper}>
             <div className={styles.container}>
-                <Title value='find us' />
+                <div className={styles.title}>
+                    <Title value='find us' />
+                </div>
                 <div className={styles.wrapperInfo}>
                     <DetailsCard descriSecond='rue 265 750' descriFirst='Avenue de la prairie' title='location' src='location' />
-                    <DetailsCard descriSecond='rue 265 750' descriFirst='Avenue de la prairie' title='phone' src='phone' />
+                    <DetailsCard descriSecond='209 584 787' descriFirst='205 584 789' title='phone' src='phone' />
                 </div>
             </div>
         </section>

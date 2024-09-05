@@ -7,13 +7,17 @@ $black-25 : rgba(0, 0, 0, 0.25);
 $black-50 : rgba(0, 0, 0, 0.50);
 $black-75 : rgba(0, 0, 0, 0.75);
 $black-secondary : rgba(49, 39, 39, 0.82);
-$black:#2C2C2C;
+$black: #2C2C2C;
 $gray : #D9D9D9;
 $gray-35 : rgb(217 217 217 / 25%);
 
+$breakpoints : ("desktop" : 1280px, "laptop": 1024px, "tab_landscape" : 992px , "tab_portrait" : 768px, "mobile":480px);
+
 @function text-space ($sizeValue, $valueP) {
     @return ((($sizeValue * $valueP)/100)*1px)
-};
+}
+
+;
 
 @mixin flex ($content, $items, $direction) {
     display: flex;
@@ -21,4 +25,38 @@ $gray-35 : rgb(217 217 217 / 25%);
     align-items: $items;
     flex-direction: $direction;
 }
+
+@mixin media_desktop () {
+    @media (max-width : map-get($breakpoints, "desktop")) {
+        @content;
+    }
+}
+
+;
+
+@mixin media_laptop () {
+    @media (max-width : map-get($breakpoints, "laptop")) {
+        @content;
+    }
+}
+
+;
+
+@mixin media_tab_landscape {
+    @media (max-width : map-get($breakpoints , "tab_landscape")) {
+        @content;
+    }
+}
+
+@mixin media_tab_portrait {
+    @media (max-width : map-get($breakpoints , "tab_portrait")) {
+        @content;
+    }
+}
+
+@mixin media_mobile {
+    @media (max-width : map-get($breakpoints , "mobile")) {
+        @content;
+    }
+};
 

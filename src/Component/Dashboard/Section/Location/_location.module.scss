@@ -10,6 +10,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @include media_mobile {
+        padding: 15px 25px;
+    }
+
     .container {
         width: fit-content;
         height: fit-content;
@@ -20,11 +24,40 @@
         border-radius: 2px;
         box-shadow: 8px 0 0 $black-25;
 
+        @include media_laptop {
+            row-gap: 35px
+        }
+
+        @include media_tab_landscape {
+            row-gap: 20px;
+        }
+
+        @include media_mobile {
+            width: 100%;
+            padding: 10px 20px 20px;
+            align-items: center;
+        }
+
+        // .title {
+        //     width: 100%;
+        //     @include flex(center, center,row);
+        // }
 
         .wrapperInfo {
             @include flex (space-between, center, row);
             width: 511px;
             height: fit-content;
+
+            @include media_tab_landscape {
+                width: 430px;
+            }
+
+            @include media_mobile {
+                width: 100%;
+                @include flex(start, center, column);
+                row-gap: 15px;
+            }
+
         }
     }
 }

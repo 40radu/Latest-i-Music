@@ -10,7 +10,7 @@ interface IPrice {
 function Price( {value} : IPrice) {
   return (
     <section className={styles.price}>
-        <Image src={PriceIc} alt='logo price'/>
+        <Image src={PriceIc} alt='logo price' className={styles.image}/>
         <p>{value} £</p>
     </section>
   )

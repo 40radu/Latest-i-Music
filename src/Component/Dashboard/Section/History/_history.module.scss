@@ -7,6 +7,17 @@
     @include flex(center, start , column);
     row-gap: 10px;
 
+    @include media_desktop {
+        padding: 80px 85px;
+    }
+
+    @include media_laptop {
+        padding: 80px 45px;
+    }
+
+    @include media_mobile {
+        padding: 50px 20px;
+    }
     
 
     .wrapper {
@@ -19,12 +30,25 @@
             column-gap: 230px;
         }
 
+        @include media_tab_landscape {
+            column-gap: 20px;
+        }
+
+        @include media_mobile {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
         .text_zone{
             width: 510px;
             height: fit-content;
             @include flex(start, start, column);
             row-gap: 23px;
             padding-top: 25px;
+
+            @include media_tab_landscape {
+                width: 100%;
+            }
 
             h4{
                 font-size: 21px;
@@ -35,10 +59,21 @@
             }
 
             .descri {
+                width: 100%;
                 font-size: 14px;
                 font-weight: 400;
                 color: $black-40;
                 letter-spacing: text-space (14,10);
+            }
+        }
+
+        .image{
+            @include media_laptop {
+                width: 325px;
+            }
+
+            @include media_tab_portrait {
+                width: 300px;
             }
         }
     }

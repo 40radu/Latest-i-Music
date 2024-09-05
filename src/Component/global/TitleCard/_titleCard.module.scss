@@ -1,11 +1,15 @@
 @import '../../../app/mixins';
 
 .title {
-    width: 100%;
+    width:fit-content;
     height: fit-content;
     font-size: 21px;
-    font-weight: 800;
+    font-weight: 700;
     color: $black;
     text-transform: uppercase;
     letter-spacing: text-space(21,8);
+
+    @include media_laptop {
+        font-size: 18px;
+    }
 }

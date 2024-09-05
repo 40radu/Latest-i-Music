@@ -18,6 +18,14 @@
         cursor: pointer;
         text-transform: uppercase;
 
+        @include media_tab_portrait {
+            font-size: 18px;
+        }
+
+        @include media_mobile {
+            font-size: 17px;
+        }
+
         &:hover {
             background-color: $gray-35;
         }
@@ -29,5 +37,13 @@
         color: $black-40;
         letter-spacing: text-space(18,8);
         font-weight: 600;
+
+        @include media_tab_portrait {
+            font-size: 16px;
+        }
+
+        @include media_mobile {
+            font-size: 14px;
+        }
     }
 }

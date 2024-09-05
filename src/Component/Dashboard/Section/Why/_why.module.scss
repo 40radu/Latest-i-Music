@@ -6,6 +6,19 @@
     @include flex (center, start, column);
     row-gap: 50px;
 
+    @include media_desktop {
+        padding: 50px 85px;
+    }
+
+    @include media_laptop {
+        padding: 50px 45px;
+    }
+
+
+    @include media_mobile {
+        padding: 50px 20px;
+    }
+
 
     ul {
         width: 100%;
@@ -14,6 +27,13 @@
         @media (min-width : 1441px) {
             column-gap: 100px;
             justify-content: center;
+        }
+
+        @include media_laptop {
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 25px;
+            column-gap: 25px;
         }
     }
 }

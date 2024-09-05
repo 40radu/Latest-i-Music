@@ -1,0 +1,23 @@
+@import '../../../app/mixins';
+
+.text_area {
+    width: 440px;
+    height: 230px;
+    border-bottom: solid 1px $black-40;
+    padding: 15px 20px;
+    outline: none;
+    color: $black-75;
+    font-size: 18px;
+    letter-spacing: text-space(18, 4);
+
+    @include media_mobile {
+        width: 100%;
+    }
+
+    &::placeholder {
+        color: $black-25;
+        font-size: 18px;
+        letter-spacing: text-space(18, 4);
+        text-transform: capitalize;
+    }
+}

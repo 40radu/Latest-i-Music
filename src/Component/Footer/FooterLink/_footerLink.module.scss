@@ -1,0 +1,35 @@
+@import '../../../app/mixins';
+
+.footerLink {
+    width: 150px;
+    height: fit-content;
+    @include flex (start, start, column);
+    row-gap: 2px;
+
+    h5 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: text-space(20, 4);
+        color: $black-75;
+        text-transform: capitalize;
+    }
+
+    .containerLinks {
+        width: 100%;
+        height: fit-content;
+        @include flex (center, start, column);
+        row-gap: 10px;
+
+        li {
+            list-style: none;
+            width: 100%;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 400;
+            color: $black-50;
+            text-transform: capitalize;
+            letter-spacing: text-space(14, 4);
+            text-decoration: none;
+        }
+    }
+}

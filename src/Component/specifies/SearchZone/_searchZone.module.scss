@@ -1,0 +1,11 @@
+@import '../../../app/mixins';
+
+.containerImg {
+    width: fit-content ;
+    height: fit-content;
+    padding-top: 4px;
+
+    .image {
+        opacity: 0.5;
+    }
+}

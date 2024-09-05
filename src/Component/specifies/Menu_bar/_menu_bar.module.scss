@@ -1,0 +1,39 @@
+@import '../../../app/mixins';
+
+.menu_bar {
+    position: relative;
+
+    .image {
+        cursor: pointer;
+    }
+
+    ul {
+        position: fixed;
+        width: 60%;
+        right: 0;
+        top: 93px;
+        padding: 25px 50px;
+        background-color: $white;
+        @include flex (start, start, column);
+        row-gap: 25px;
+        border: 1px solid $black-15;
+        // display: none;
+
+        a {
+            @include flex (center, center, row);
+            width: 100%;
+            font-size: 21px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            color: $black;
+        }
+
+        @include media_mobile {
+            width: 100%;
+            top: 67px;
+            border-left: none;
+            border-right: none;
+        }
+    }
+}

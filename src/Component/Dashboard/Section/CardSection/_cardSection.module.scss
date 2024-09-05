@@ -12,5 +12,18 @@
         bottom: 110px;
         background-color: #F5F5F7;
         box-shadow: 0 6px 50px $black-25;
+
+        @include media_tab_landscape {
+            flex-wrap: wrap;
+            background-color: transparent;
+            box-shadow: none;
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+
+        @include media_mobile{
+            padding: 0 20px;
+
+        }
     }
 }

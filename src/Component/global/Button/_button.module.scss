@@ -1,24 +1,38 @@
 @import '../../../app/mixins';
 
 .primary {
+    width: fit-content;
     padding: 15px 60px;
     background-color: $red;
     color: $white;
     font-size: 16px;
     font-weight: 600;
-    letter-spacing: text-space(16,6);
+    letter-spacing: text-space(16, 6);
     border-radius: 2px;
     border: 1px $red solid;
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    @include flex(center, center,row);
+
+    &:hover {
+        color: $black-50;
+        border-color: $black-25;
+        background-color: transparent
+    }
+
+    @include media_laptop {
+        padding: 12px 30px;
+        font-size: 14px
+    }
 }
 
 .secondary {
     @extend .primary;
     border: 1px solid $white;
     background-color: transparent;
-}
 
-.third {
-    @extend .secondary;
-    color: $black-50;
-    border-color: $black-25;
+    &:hover {
+        border-color: $white;
+        color: $white;
+    }
 }

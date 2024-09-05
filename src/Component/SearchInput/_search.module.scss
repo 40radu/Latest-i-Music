@@ -8,6 +8,10 @@
     border: 1px solid $gray;
     border-radius: 8px;
 
+    @include media_desktop {
+        width: 250px;
+    }
+
     img {
         opacity: 0.5;
     }

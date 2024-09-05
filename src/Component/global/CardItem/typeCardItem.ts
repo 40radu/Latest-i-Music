@@ -1,3 +1,4 @@
 export interface ICardItem {
-    src : string
+    title : string;
+    descri : string
 }

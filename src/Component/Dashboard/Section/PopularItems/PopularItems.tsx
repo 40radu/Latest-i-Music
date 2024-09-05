@@ -9,44 +9,60 @@ import { Navigation, Pagination, Mousewheel, Keyboard, A11y } from 'swiper/modul
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import styles from './_popularItems.module.scss'
+// import  from './_popularItems.module.scss'/
 
 
 function PopularItems() {
     return (
-        <section className={styles.popular}>
-            <div className={styles.title}>
+        <section className='popular'>
+            <div className='title'>
                 <Title value='popular articles' />
             </div>
             <Swiper
-                className={styles.wrapperAll}
+                className='wrapperAll'
                 cssMode={true}
                 slidesPerView={'auto'}
+                spaceBetween={0}
                 navigation={true}
                 pagination={{ clickable: true }}
                 mousewheel={true}
                 keyboard={true}
                 // a11y={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard, A11y]}
+
+                // breakpoints={{
+                    
+                //     768: {
+                //       slidesPerView: 2,
+                //       spaceBetween: 10,
+                //     }, 
+                //     1025 : {
+                //         slidesPerView : 'auto'
+                //     }
+                   
+                //   }}
+
+                // breakpoints={{1024 : {slidesPerView : 2 , spaceBetween : 50}}}
+                
                 
                 >
-                <SwiperSlide className={styles.wrapperItems}>
-                    <CardItem src='' />
+                <SwiperSlide className="wrapperItems">
+                    <CardItem descri='description zone' title='guitare' />
                 </SwiperSlide >
-                <SwiperSlide className={styles.wrapperItems}>
-                    <CardItem src='' />
-                </SwiperSlide ><SwiperSlide className={styles.wrapperItems}>
-                    <CardItem src='' />
-                </SwiperSlide><SwiperSlide className={styles.wrapperItems}>
-                    <CardItem src='' />
+                <SwiperSlide className="wrapperItems">
+                    <CardItem descri='description zone' title='guitare' />
+                </SwiperSlide ><SwiperSlide className="wrapperItems">
+                    <CardItem descri='description zone' title='guitare' />
+                </SwiperSlide><SwiperSlide className="wrapperItems">
+                    <CardItem descri='description zone' title='guitare' />
                 </SwiperSlide>
-                <SwiperSlide className={styles.wrapperItems}>
-                    <CardItem src='' />
+                <SwiperSlide className="wrapperItems">
+                    <CardItem descri='description zone' title='guitare' />
                 </SwiperSlide>
-                <SwiperSlide className={styles.wrapperItems}>
-                    <CardItem src='' />
-                </SwiperSlide><SwiperSlide className={styles.wrapperItems}>
-                    <CardItem src='' />
+                <SwiperSlide className="wrapperItems">
+                    <CardItem descri='description zone' title='guitare' />
+                </SwiperSlide><SwiperSlide className="wrapperItems">
+                    <CardItem descri='description zone' title='guitare' />
                 </SwiperSlide>
             </Swiper>
         </section>

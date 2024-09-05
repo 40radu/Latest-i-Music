@@ -10,12 +10,20 @@
     border-radius: 2px;
     border-left: $red 2px solid;
     background-color: $white;
+
+    @include media_laptop {
+        width: 400px;
+    }
     h5 {
         font-size: 22px;
         font-weight: 800;
         letter-spacing: text-space(22,10);
         color: $black-secondary;
         text-transform: capitalize;
+
+        @include media_laptop {
+            font-size: 20px;
+        }
     }
 
     .descri {
@@ -25,5 +33,9 @@
         font-weight: 600;
         letter-spacing: text-space(16,10);
         color: $black-40;
+
+        @include media_laptop {
+            font-size: 14px;
+        }
     }
 }

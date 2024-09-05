@@ -8,4 +8,15 @@
     @include flex (center , center, row);
     padding: 80px 0;
     column-gap: 20px;
+
+    @include media_tab_portrait {
+        padding: 20px 45px;
+        flex-wrap: wrap;
+        overflow: auto;
+        row-gap: 20px;
+    }
+
+    @include media_mobile {
+        padding: 20px;
+    }
 }

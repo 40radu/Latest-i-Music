@@ -1,0 +1,27 @@
+@import '../../../app/mixins';
+
+.followZone {
+    width: 353px;
+    height: fit-content;
+    @include flex (start , start,column);
+    row-gap: 30px;
+
+    @include media_tab_landscape {
+        width: 260px;
+    }
+
+    .descri {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: text-space(16,8);
+        color: $black-50;
+        width: 100%;
+    }
+
+    .container_logo {
+        width: fit-content;
+        height: fit-content;
+        @include flex (start, center, row);
+        column-gap: 13px;
+    }
+}

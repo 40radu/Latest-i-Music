@@ -11,6 +11,19 @@
         letter-spacing: text-space(58,8);
         color: $black-40;
         text-transform: uppercase;
+
+
+        @include media_laptop {
+            font-size: 48px;
+        }
+
+        @include media_tab_landscape {
+            font-size: 40px;
+        }
+
+        @include media_mobile {
+            letter-spacing: 2.64px;
+        }
     }
 
     &::after {
@@ -19,5 +32,10 @@
         height: 11px;
         border-radius: 0 0 0 20px;
         background-color: $red;
+
+        @include media_tab_landscape {
+            width: 54px;
+            height: 9px;
+        }
     }
 }

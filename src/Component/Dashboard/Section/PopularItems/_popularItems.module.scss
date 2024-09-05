@@ -1,35 +1,101 @@
 @import '../../../../app/mixins';
 
+
 .popular {
     width: 100%;
     height: fit-content;
-    // padding: 0 50px;
-    overflow: visible;
     background-color: transparent;
-
+    @include flex (start, start, column);
+    row-gap: 10px;
 
     .title {
         padding-left: 150px;
+
+        @include media_desktop {
+            padding-left: 80px;
+        };
+
+        @include media_laptop {
+            padding-left: 45px;
+        }
+
+        @include media_mobile {
+            padding-left: 20px;
+        }
     }
 
-    .wrapperAll {
-        width: 100%;
+    .swiper {
+        width: 100%;    
         padding-bottom: 20px;
-        background-color: transparent;
-        // padding-left: 150px;    
 
-        div {
-            padding: 0 50px;
-            color: $black-25;
-            outline: none;
+        .swiper-wrapper {
+            width: 100%;
+
+            .swiper-slide {
+                width: fit-content;
+                padding: 50px 0 50px 150px;
+
+                @include media_desktop {
+                    padding-left: 80px;
+                }
+
+                @include media_laptop {
+                    padding-left: 45px;
+                }
+
+
+                @include media_mobile {
+                    padding-left: 20px;
+                }
+            }
+
+            
+
         }
 
-        .wrapperItems {
-            padding: 50px;
-            padding-left: 150px;
-            width: fit-content;
+        .swiper-button-prev , .swiper-button-next {
+            color: $red;
+
+            @include media_laptop {
+               display: none;
+            }
+            
         }
+
+        .swiper-button-prev {
+            left: 50px;
+            @include media_desktop {
+                left: 20px;
+            }
+        }
+
+        .swiper-button-next {
+            right: 50px;
+            @include media_desktop {
+                right: 20px;
+            }
+        }
+
+
+
     }
+
+    // .swiper-wrapper {
+    //     width: 100%;
+    //     // margin-left: 150px;
+    //     background-color: transparent;  
+    //     @include flex(start, start, row);
+    //     column-gap: 150px;
+
+    //     .swiper-button-prev {
+    //         color: red;
+    //     }
+
+    //     .wrapperItems {
+    //         width: fit-content;
+    //         padding: 50px 0;
+    //     }
+    // }
 
 
 

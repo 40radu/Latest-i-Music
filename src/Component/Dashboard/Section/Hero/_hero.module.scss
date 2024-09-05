@@ -3,13 +3,30 @@
 .hero {
     width: 100%;
     height: 798px;
-    margin-top: 97px;
     background-image: url('/Image/Dashboard/hero.png');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 150px;
     @include flex(center, start, column);
     row-gap: 25px;
+
+    @include media_desktop {
+        padding: 0 85px;
+    }
+
+    @include media_laptop {
+        padding: 0 45px;
+        background-image: url('/Image/Dashboard/hero992.png');
+
+    }
+
+    @include media_mobile {
+        background-image:url('/Image/Dashboard/hero_mobile.png') ;
+    }
+
+    @include media_mobile {
+        padding: 0 20px;
+    }
 
     h1 {
         max-width: 900px;
@@ -19,6 +36,23 @@
         letter-spacing: text-space(68, 4);
         color: $white;
         text-transform: uppercase;
+
+        @include media_laptop {
+            font-size: 55px;
+            max-width: 610px;
+        }
+
+        ;
+
+        @include media_tab_landscape {
+            font-size: 48px;
+            ;
+        }
+
+        @include media_mobile {
+            font-size: 36px;
+        }
+
     }
 
     .descri {
@@ -35,5 +69,12 @@
         @include flex(start, start, row);
         column-gap: 32px;
         padding-bottom: 100px;
+
+        @include media_mobile {
+            justify-content: space-between;
+            column-gap: 0;
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
     }
 }

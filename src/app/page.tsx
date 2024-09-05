@@ -2,7 +2,6 @@ import CardSection from "@/Component/Dashboard/Section/CardSection/CardSection";
 import Faq from "@/Component/Dashboard/Section/Faq/Faq";
 import Hero from "@/Component/Dashboard/Section/Hero/page";
 import History from "@/Component/Dashboard/Section/History/History";
-import Location from "@/Component/Dashboard/Section/Location/Location";
 import Opinion from "@/Component/Dashboard/Section/Opinion/Opinion";
 import PopularItems from "@/Component/Dashboard/Section/PopularItems/PopularItems";
 import Why from "@/Component/Dashboard/Section/Why/Why";
@@ -18,7 +17,6 @@ export default function Home() {
       <Why/>
       <Opinion/>
       <Faq/>
-      <Location/>
     </main>
   );
 }

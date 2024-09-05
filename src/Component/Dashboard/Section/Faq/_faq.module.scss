@@ -5,6 +5,18 @@
     @include flex (start , center, column);
     row-gap: 20px;
 
+    @include media_desktop{
+        padding: 50px 85px 80px;
+    };
+
+    @include media_laptop {
+        padding: 50px 45px 80px;
+    }
+
+    @include media_mobile {
+        padding: 50px 20px 80px;
+    }
+
     ul {
         width: 100%;
     }

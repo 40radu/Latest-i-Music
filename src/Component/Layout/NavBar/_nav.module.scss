@@ -1,18 +1,77 @@
 @import '../../../app/mixins';
 
-.navbar {
-    width: 100%;
-    padding: 25px 150px ;
-    background-color: $white;
-    @include flex (space-between , center, row);
-    box-shadow: 0 1px 6px $black-15;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+.container_nav {
+    position: relative;
+    padding-top: 93px;
 
-    .navLinks {
-        @include flex(center, center, row);
-        column-gap: 50px;
+    @include media_mobile {
+        padding-top: 31px;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 25px 150px;
+        background-color: $white;
+        @include flex (space-between, center, row);
+        box-shadow: 0 1px 6px $black-15;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        border-bottom: 1px solid $black-15;
+
+        @include media_desktop {
+            padding: 25px 80px
+        }
+
+        @include media_laptop {
+            padding: 25px 40px
+        }
+
+        @include media_mobile {
+            padding: 12px 20px;
+        }
+
+        .logo_first {
+            @include media_mobile {
+                display: none;
+            }
+        }
+
+        .logo_mobile {
+            display: none;
+            @include media_mobile {
+                display: block;
+            }
+        }
+
+        .navLinks {
+            @include flex(center, center, row);
+            column-gap: 50px;
+
+            @include media_laptop {
+                column-gap: 35px;
+            }
+
+            @include media_tab_portrait {
+                display: none;
+            }
+
+
+        }
+
+        .menu_bar {
+            @include flex (center, center, row);
+            column-gap: 35px;
+            display: none;
+
+            @include media_tab_portrait {
+                display: flex;
+            }
+
+            @include media_mobile {
+                column-gap: 15px;
+            }
+        }
     }
 }

@@ -16,10 +16,10 @@ function DetailsCard({src , descriFirst ,descriSecond, title} : IDetails) {
   return (
     <div className={styles.details_card}>
         {
-            src === 'location' ? <Image src={locationIc} alt='icon location'/> :""
+            src === 'location' ? <Image src={locationIc} alt='icon location' className={styles.image}/> :""
         }
         {
-            src === 'phone' ? <Image src={phoneIc} alt='icon phone'/> :""
+            src === 'phone' ? <Image src={phoneIc} alt='icon phone' className={styles.image}/> :""
         }
         <div className={styles.text_zone}>
             <h6>{title}</h6>

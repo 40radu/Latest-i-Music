@@ -10,22 +10,37 @@
     border-radius: 2px;
     position: relative;
 
+    @include media_laptop {
+        box-shadow: 0 6px 50px $black-25;
+        width: 288px;
+
+    }
+
+    @include media_mobile{
+        width: 315px;
+    }
+
     .descri {
         width: 100%;
         font-size: 16px;
         font-weight: 400;
         letter-spacing: text-space(16, 4);
         color: $black-40;
+
+        @include media_laptop{
+            font-size: 14px;
+            letter-spacing: 0.24px;
+        }
     }
 
-    &:hover {   
+    &:hover {
         scale: 1.01;
 
         img {
             filter: blur(1px);
         }
 
-        button{
+        button {
             display: flex;
         }
     }
@@ -33,7 +48,15 @@
     button {
         display: none;
         position: absolute;
-        left: 20%;
-        right: 20%;
+        left: 22%;
+
+        @include media_laptop{
+            left: 27%;
+            bottom: 42%;
+        }
+
+        @include media_mobile{
+            left: 29%;
+        }
     }
 }

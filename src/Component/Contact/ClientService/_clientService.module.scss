@@ -1,0 +1,54 @@
+@import '../../../app/mixins';
+
+.customer_service {
+    width: 523px;
+    height: fit-content;
+    @include flex(start, start, column);
+    row-gap: 34px;
+
+    @include media_desktop {
+        @include flex (center, center, column);
+    }
+
+    @include media_mobile {
+        width: 100%;
+    }
+
+    .wrapper_title {
+        width: fit-content;
+        padding: 10px 30px;
+        @include flex (center, start, row);
+        column-gap: 42px;
+        border-bottom: 1px solid $black-40;
+
+        h4 {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: text-space(21,8);
+            color: $black-40;
+            text-transform: uppercase;
+
+            @include media_mobile {
+                letter-spacing: 0.68px;
+            }
+        }
+
+        @include media_mobile {
+            column-gap: auto;
+            justify-content: space-between;
+            padding: 10px;
+        }
+    }
+
+    .descri {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: text-space(18,4);
+        color: $black-secondary;
+
+        span {
+            color: $red;
+        }
+    }
+}

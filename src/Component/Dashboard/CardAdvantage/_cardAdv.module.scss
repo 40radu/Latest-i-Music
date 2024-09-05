@@ -8,6 +8,10 @@
     row-gap: 10px;
     box-shadow: 0 0 4px $black-25;
 
+    @include media_laptop {
+        width: 300px;
+    }
+
     .wrapper_top {
         width: 100%;
         height: fit-content;
@@ -31,5 +35,10 @@
         font-weight: 600;
         letter-spacing: text-space(16,10);
         color: $black-50;
+
+        @include media_laptop {
+            font-size: 14px;
+            height: 144px;
+        }
     }
 }

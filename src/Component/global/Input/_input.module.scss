@@ -1,0 +1,30 @@
+@import '../../../app/mixins';
+
+.container_input {
+    width: 440px;
+    height: fit-content;
+    @include flex (start, center, row);
+    column-gap: 20px;
+    padding: 15px 20px;
+    border-bottom: solid 1px $black-40;
+
+    @include media_mobile {
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        color: $black-75;
+        font-size: 18px;
+        letter-spacing: text-space(18, 4);
+
+        &::placeholder {
+            color: $black-25;
+            font-size: 18px;
+            letter-spacing: text-space(18, 4);
+            text-transform: capitalize;
+        }
+    }
+}
