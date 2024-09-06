@@ -14,9 +14,9 @@ export default function Home() {
       <CardSection />
       <History />
       <PopularItems />
-      <Why/>
-      <Opinion/>
-      <Faq/>
+      <Why />
+      <Opinion />
+      <Faq />
     </main>
   );
 }

@@ -8,7 +8,7 @@
     row-gap: 10px;
     box-shadow: 0 0 60px $black-15;
 
-    @include media_tab_portrait {
+    @include media_desktop {
         width: 310px;
     }
 
@@ -27,12 +27,14 @@
             letter-spacing: text-space(14,8);
             color: $black;
             text-align: center;
-            text-transform: capitalize;
+            text-transform: capitalize;font-style: italic
         }
 
         .in_stock {
             @extend .descri;
             color: #57E040;
+            font-style: normal;
+            font-size: 12px;
         }
     }
 }
