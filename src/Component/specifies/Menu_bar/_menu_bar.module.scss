@@ -2,7 +2,6 @@
 
 .menu_bar {
     position: relative;
-
     .image {
         cursor: pointer;
     }
@@ -17,6 +16,8 @@
         @include flex (start, start, column);
         row-gap: 25px;
         border: 1px solid $black-15;
+        z-index: 20;
+
         // display: none;
 
         a {

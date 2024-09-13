@@ -10,10 +10,12 @@
 
     @include media_tab_portrait {
         padding-top: 37px;
-    };
+    }
 
-    @include media_mobile  {
-            padding-top: 74px;
+    ;
+
+    @include media_mobile {
+        padding-top: 74px;
     }
 
     .wrapperLinks {
@@ -24,7 +26,7 @@
         padding: 0 150px;
         @include flex (start, center, row);
         column-gap: 88px;
-        background-image: url('/Image/Article/nav.png');
+        background-image: url('/Image/Article/nav.png') !important;
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -41,7 +43,8 @@
             column-gap: 30px;
             overflow-y: auto;
             top: 94px;
-            &::-webkit-scrollbar{
+
+            &::-webkit-scrollbar {
                 width: 0;
                 height: 0;
             }
@@ -68,14 +71,24 @@
             cursor: pointer;
             text-wrap: nowrap;
 
+            &:hover {
+                background-color: $red-83;
+                opacity: 0.6;
+
+            }
+
             @include media_laptop {
                 font-size: 14px;
-            };
+            }
+
+            ;
 
 
             @include media_tab_portrait {
                 padding: 8px;
-            };
+            }
+
+            ;
         }
 
         .active_link {

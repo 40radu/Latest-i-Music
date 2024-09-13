@@ -15,6 +15,8 @@ import Menu_bar from '@/Component/specifies/Menu_bar/Menu_bar'
 function NavBar() {
     return (
         <section className={styles.container_nav}>
+            <div className={styles.mask_body_nav} id='mask_body_nav'></div>
+
             <nav className={styles.navbar}>
                 <Link href='/'>
                     <Image src={logoIc} alt='logo'  className={styles.logo_first}/>

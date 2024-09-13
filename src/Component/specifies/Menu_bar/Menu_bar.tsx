@@ -12,16 +12,20 @@ function Menu_bar() {
 
     function handleClick() {
         const body: HTMLBodyElement | null = document.querySelector('body');
+        const mask_body =  document.querySelector('#mask_body_nav') as HTMLDivElement
 
         if (showMenu === false) {
-            if (body) {
+            if (body && mask_body) {
                 body.style.overflow = 'hidden'
+                mask_body.style.display = 'block'
             }
         }
 
         if (showMenu === true) {
-            if (body) {
+            if (body && mask_body) {
                 body.style.overflow = 'auto'
+                mask_body.style.display = 'none'
+
             }
         }
         setShowMenu(!showMenu)

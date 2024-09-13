@@ -6,17 +6,18 @@ import Opinion from "@/Component/Dashboard/Section/Opinion/Opinion";
 import PopularItems from "@/Component/Dashboard/Section/PopularItems/PopularItems";
 import Why from "@/Component/Dashboard/Section/Why/Why";
 
-
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <CardSection />
-      <History />
-      <PopularItems />
-      <Why />
-      <Opinion />
-      <Faq />
+      <div>
+        <Hero />
+        <CardSection />
+        <History />
+        <PopularItems />
+        <Why />
+        <Opinion />
+        <Faq />
+      </div>
     </main>
   );
 }

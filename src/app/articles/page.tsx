@@ -1,33 +1,13 @@
 import CardItem from '@/Component/global/CardItem/CardItem'
 import React from 'react'
 import styles from './_articles.module.scss'
+import { redirect } from 'next/navigation'
 
 
 function Article() {
-  return (
-    <section className={styles.container_article}>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
 
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
+  return redirect ('articles/all_items')
 
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-      <CardItem title='Gibson' descri='description gibson'/>
-    </section>
-  )
 }
 
 export default Article

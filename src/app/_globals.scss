@@ -13,8 +13,8 @@
     
 }
 
-body {
-    font-size: 'Poppins'
+::-webkit-scrollbar{
+    width: 0;
 }
 
 @import '../Component/Dashboard/Section/PopularItems/popularItems.module';

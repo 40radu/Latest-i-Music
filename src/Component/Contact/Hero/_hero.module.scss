@@ -3,7 +3,7 @@
 .hero_contact {
     width: 100%;
     height: 616px;
-    background-image: url('/Image//Contact/hero.png');
+    background-image: url('/Image//Contact/hero.png') !important;
     background-repeat: no-repeat;
     background-size: cover;
     @include flex (center, start, column);
@@ -19,12 +19,12 @@
     }
 
     @include media_tab_portrait {
-        background-image: url('/Image//Contact/hero768.png');
+        background-image: url('/Image//Contact/hero768.png') !important;
     }
 
     @include media_mobile {
         padding: 0 20px;
-        background-image: url('/Image//Contact/hero480.png');
+        background-image: url('/Image//Contact/hero480.png') !important;
     }
 
     h2 {
