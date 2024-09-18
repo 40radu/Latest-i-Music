@@ -33,26 +33,59 @@
 // }
 
 
+import { dataAcoustic } from "@/Base/acoustic/baseAcoustic";
 import { NextResponse } from "next/server";
 
 export async function GET (request : Request) {
-    return NextResponse.json([
-        {
-            marque : 'fender',
-            name : 'fkls',
-            type : '4 cordes'
-        }
-    ])
+    return NextResponse.json(dataAcoustic)
 }
 
 
 
 
-const data = [
-    {
-        mark :'fender',
-        type : 'electric',
-        price : 1299,
-        name : 'stratocaster american'
-    }
-]
+// const dataBass = [
+//     {
+//         id: '0',
+//         mark :'fender',
+//         type : 'electric',
+//         price : 1299,
+//         name : 'stratocaster american'
+//     },
+//     {
+//         id: '0',
+//         mark :'fender',
+//         type : 'electric',
+//         price : 1299,
+//         name : 'stratocaster american'
+//     },{
+//         id: '0',
+//         mark :'fender',
+//         type : 'electric',
+//         price : 1299,
+//         name : 'stratocaster american'
+//     },{
+//         id: '0',
+//         mark :'fender',
+//         type : 'electric',
+//         price : 1299,
+//         name : 'stratocaster american'
+//     },{
+//         id: '0',
+//         mark :'fender',
+//         type : 'electric',
+//         price : 1299,
+//         name : 'stratocaster american'
+//     },{
+//         id: '0',
+//         mark :'fender',
+//         type : 'electric',
+//         price : 1299,
+//         name : 'stratocaster american'
+//     },{
+//         id: '0',
+//         mark :'fender',
+//         type : 'electric',
+//         price : 1299,
+//         name : 'stratocaster american'
+//     },
+// ]

@@ -1,6 +1,6 @@
 import NavArticle from '@/Component/Articles/NavArticle/NavArticle';
 import React from 'react'
-import styles from './_articles.module.scss'
+import styles from './_layoutArticle.module.scss'
 
 function ArticleLayourt({
     children,

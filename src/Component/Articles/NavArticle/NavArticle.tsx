@@ -20,6 +20,7 @@ function NavArticle() {
                 <Link href="#" className={`${pathname === '/articles/ukulele' ? styles.active_link : styles.link}`}>ukulele</Link>
                 <Link href="#" className={`${pathname === '/articles/acoustique' ? styles.active_link : styles.link}`}>acoustique</Link>
                 <Link href="#" className={`${pathname === '/articles/electro-acoustique' ? styles.active_link : styles.link}`}>electro-acoustique</Link>
+                <Link href="#" className={`${pathname === '/articles/classic' ? styles.active_link : styles.link}`}>classic</Link>
 
             </ul>
         </div>

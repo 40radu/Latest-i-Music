@@ -1,0 +1,23 @@
+@import '../../../app/mixins';
+
+.container {
+    @apply w-auto h-auto relative;
+
+    .nav_zone {
+        @apply w-auto h-auto relative cursor-pointer;
+        
+
+        .number {
+
+            @apply absolute -right-2;
+            top: 11px;
+            padding: 0px 5px;
+            border-radius: 50%;
+            color: $white;
+            font-size: 12px;
+            background-color: $red;
+            font-weight: 500;
+        }
+    }
+
+}

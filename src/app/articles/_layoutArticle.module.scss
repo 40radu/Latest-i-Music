@@ -1,0 +1,18 @@
+@import '../../app/mixins';
+
+.container_article {
+    @apply  grid grid-cols-4 justify-items-center p-12 gap-4;
+
+    @media (max-width : 1440px){
+        @apply grid-cols-3;
+    }
+
+    @include media_laptop {
+        @apply grid-cols-2;
+    }
+
+    @include media_mobile {
+        @apply grid-cols-1;
+    }
+
+}

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import searchLogo from '../../../Icons/search.svg'
 import styles from './_searchZone.module.scss'
+import Link from 'next/link'
 
 function SearchZone() {
 
@@ -48,16 +49,6 @@ function SearchZone() {
         }
     }
 
-    function handleBlur() {
-        const body = document.querySelector('body')
-
-        setShowSearch(false)
-
-    }
-
-    function clik() {
-        console.log("link")
-    }
     return (
         <div className={styles.containerImg}>
             <label htmlFor="search_input">
@@ -76,11 +67,11 @@ function SearchZone() {
                     <ul className={styles.wrapper_link}>
                         {valueInput && (
                             data.filter((element) => element.categories.toLowerCase().includes(valueInput.toLowerCase())).length > 0 ?
-                                data.filter((element) => element.categories.toLowerCase().includes(valueInput.toLowerCase())).map((element) => {
+                                data.filter((element) => element.categories.toLowerCase().includes(valueInput.toLowerCase())).map((element , index) => {
 
-                                    return (<a href={`/articles/${element.link}`} onClick={clik}><p onClick={clik}>{element.categories}</p></a>)
+                                    return (<Link key={index} href={`/articles/${element.link}`} onClick={handleClick}><p>{element.categories}</p></Link>)
                                 }) :
-                                <li className={styles.not_exist} ><p >No exists</p></li>
+                                <a ><p className={styles.not_exist}>Not exists</p></a>
                         )}
                     </ul>
 
