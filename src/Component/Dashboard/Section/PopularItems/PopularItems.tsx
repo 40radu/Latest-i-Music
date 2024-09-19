@@ -53,8 +53,8 @@ function PopularItems() {
                 
                 
                 >
-                <SwiperSlide className="wrapperItems">
-                    <CardItem price={548} src={imgElectricArticle} title='Gibson SG' textButton='view similar'/>
+                {/* <SwiperSlide className="wrapperItems">
+                    <CardItem price={548} src={imgElectricArticle} title='Gibson SG' textButton='view similar' />
                 </SwiperSlide >
                 <SwiperSlide className="wrapperItems">
                     <CardItem price={442} src={imgAcoustic} title='Martin D 41L LH' textButton='view similar' />
@@ -70,7 +70,7 @@ function PopularItems() {
                     <CardItem price={430} src={imgAcoustic} title='Yamaha CX40' textButton='view similar'/>
                 </SwiperSlide><SwiperSlide className="wrapperItems">
                     <CardItem price={497} src={imgBass} title='Epiphone Jack' textButton='view similar'/>
-                </SwiperSlide>
+                </SwiperSlide> */}
             </Swiper>
         </section>
     )

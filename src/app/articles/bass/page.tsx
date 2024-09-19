@@ -13,12 +13,11 @@ async function page() {
     const data = await base.json() as IArticle[]
     
     console.log(data)
-    
-
+    // onClickButton={click}
     return (
         <>
             {data.map((element)=>{
-                return (<CardItem price={element.price} title={element.name} src={image} />)
+                return (<CardItem title={element.name} data={element} price={element.price} src={image}/>)
             })}
         </>
     )
