@@ -11,7 +11,8 @@ import imageUkulele from '../../../../public/Image/Article/ukulele.png'
 
 async function AllItems() {
 
-  const res = await fetch('http://localhost:3000/api/allArticles', { cache: 'no-store' })
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const res = await fetch (`${apiUrl}/api/allArticles` , {cache : 'no-store'})
   const data = await res.json() as IArticle[]
 
   const shuffleArray = (array: IArticle[]) => {

@@ -9,7 +9,8 @@ import next from 'next'
 
 async function page() {
 
-    const base = await fetch('http://localhost:3000/api/electro' , {cache : 'no-store'})
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const base = await fetch(`${apiUrl}/api/electro` , {cache : 'no-store'})
     const data = await base.json() as IArticle[]
     
     console.log(data)
