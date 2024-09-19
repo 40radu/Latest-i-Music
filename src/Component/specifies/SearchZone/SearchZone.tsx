@@ -14,10 +14,10 @@ function SearchZone() {
         link: 'electric'
     }, {
         categories: 'electro-acoustic guitar',
-        link: 'electro-acoustic'
+        link: 'electro'
     }, {
         categories: 'classical guitar',
-        link: 'classical'
+        link: 'classic'
     }, {
         categories: 'acoustic guitar',
         link: 'acoustic'

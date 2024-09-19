@@ -12,7 +12,7 @@
     border: 1px $red solid;
     text-transform: capitalize;
     text-wrap: nowrap;
-    @include flex(center, center,row);
+    @include flex(center, center, row);
 
     &:hover {
         color: $black-50;
@@ -24,6 +24,12 @@
         padding: 12px 30px;
         font-size: 14px
     }
+}
+
+.addBasket {
+    @extend .primary;
+    padding: 12px 30px;
+    font-size: 14px
 }
 
 .secondary {

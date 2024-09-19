@@ -6,21 +6,22 @@ import { ICardItem } from './typeCardItem'
 import Price from '../Price/Price'
 import Button from '../Button/page'
 
-import exoImg from '../../../../public/Image/Dashboard/item-bass.png'
+import exoImg from '../../../../public/Image/Article/guitare_bass.png'
 
 
 
-function CardItem({ title, descri }: ICardItem) {
+function CardItem({ title , price , src}: ICardItem) {
     return (
         <section className={styles.wrapper_card}>
-            <Image src={exoImg} alt='' className={styles.image} />
+            <Image src={src} alt='' className={styles.image} />
             <div className={styles.info}>
-                <TitleCard value={title} />
-                <p className={styles.descri}>{descri}</p>
+                {/* <TitleCard value={title} /> */}
+                <p className={styles.descri}>{title}</p>
                 <p className={styles.in_stock}>In stock</p>
+                <Price value={price} />
             </div>
-            <Price value='385' />
-            <Button className='primary' value='Add to the cart' />
+            
+            <Button className='addBasket' value='Add to the cart' />
         </section>
     )
 }

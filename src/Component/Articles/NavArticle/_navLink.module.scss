@@ -94,6 +94,10 @@
         .active_link {
             @extend .link;
             background-color: $red-83;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }

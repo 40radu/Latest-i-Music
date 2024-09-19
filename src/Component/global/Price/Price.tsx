@@ -4,14 +4,14 @@ import Image from 'next/image'
 import PriceIc from '../../../Icons/price.svg'
 
 interface IPrice {
-    value : string
+    value : number
 }
 
 function Price( {value} : IPrice) {
   return (
     <section className={styles.price}>
         <Image src={PriceIc} alt='logo price' className={styles.image}/>
-        <p>{value} £</p>
+        <p>{value} $</p>
     </section>
   )
 }

@@ -1,4 +1,7 @@
+import { StaticImageData, StaticImport } from "next/dist/shared/lib/get-img-props";
+
 export interface ICardItem {
     title : string;
-    descri : string
+    price : number;
+    src : StaticImageData;
 }

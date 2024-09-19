@@ -1,7 +1,7 @@
 @import '../../../app/mixins';
 
 .container {
-    @apply w-auto h-auto relative;
+    @apply w-auto h-auto;
 
     .nav_zone {
         @apply w-auto h-auto relative cursor-pointer;
@@ -9,12 +9,13 @@
 
         .number {
 
-            @apply absolute -right-2;
+            @apply absolute;
+            right: -5px;
             top: 11px;
-            padding: 0px 5px;
+            padding: 1px 5px;
             border-radius: 50%;
             color: $white;
-            font-size: 12px;
+            font-size: 10px;
             background-color: $red;
             font-weight: 500;
         }

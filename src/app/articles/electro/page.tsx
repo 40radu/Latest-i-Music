@@ -1,14 +1,15 @@
 
+
 import CardItem from '@/Component/global/CardItem/CardItem'
 import React, { useEffect } from 'react'
-import image from '../../../../public/Image/Article/guitare_bass.png'
+import image from '../../../../public/Image/Article/electro_acoustique.png'
 import { IArticle } from '../typeBass'
 import next from 'next'
 
 
 async function page() {
 
-    const base = await fetch('http://localhost:3000/api/bass' , {cache : 'no-store'})
+    const base = await fetch('http://localhost:3000/api/electro' , {cache : 'no-store'})
     const data = await base.json() as IArticle[]
     
     console.log(data)

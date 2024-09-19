@@ -4,13 +4,14 @@
     @include flex (start, center , row);
     width: fit-content;
     height: fit-content;
-    column-gap: 10px;
+    column-gap: 6px;
+    padding-bottom: 10px;
 
 
     p {
-        font-size: 21px;
+        font-size: 18px;
         font-weight: 800;
         color: $black-40;
-        letter-spacing: text-space (21,8);
+        letter-spacing: text-space(21,2);
     }
 }

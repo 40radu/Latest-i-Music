@@ -1,30 +1,30 @@
 @import '../../../app/mixins';
 
 .wrapper_card {
-    width: 358px;
+    // width: 318px;
     height: fit-content;
     padding: 15px;
     @include flex (start , center , column);
     row-gap: 10px;
     box-shadow: 0 0 60px $black-15;
 
-    @include media_desktop {
-        width: 310px;
-    }
+    // @include media_desktop {
+    //     width: 300px;
+    // }
 
-    @include media_mobile {
+    // @include media_tab_portrait {
         row-gap: 4px;
-        width: 250px;
-    }
+        width: 240px;
+    // }
 
     .image {
         width: 100%;
-        height: 275px;
+        // height: 275px;
         border-radius: 2px;
 
-        @include media_mobile {
+        // @include media_tab_portrait{
             height: 200px;
-        }
+        // }
     }
 
     .info {
@@ -32,7 +32,7 @@
         row-gap: 2px;
         .descri {
             font-size: 14px ;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: text-space(14,8);
             color: $black;
             text-align: center;
