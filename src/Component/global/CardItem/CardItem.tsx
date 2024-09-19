@@ -10,9 +10,10 @@ import exoImg from '../../../../public/Image/Article/guitare_bass.png'
 
 
 
-function CardItem({ title , price , src}: ICardItem) {
+function CardItem({ title , price , src , textButton , isPromo , onClickButton}: ICardItem) {
     return (
         <section className={styles.wrapper_card}>
+            {isPromo && <div className={styles.promo}>-20%</div>}
             <Image src={src} alt='' className={styles.image} />
             <div className={styles.info}>
                 {/* <TitleCard value={title} /> */}
@@ -21,7 +22,7 @@ function CardItem({ title , price , src}: ICardItem) {
                 <Price value={price} />
             </div>
             
-            <Button className='addBasket' value='Add to the cart' />
+            <Button className='addBasket' value={textButton != null ? textButton : 'Add to the cart'} onClick={onClickButton}/>
         </section>
     )
 }
