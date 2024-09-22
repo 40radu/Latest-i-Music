@@ -1,17 +1,23 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './_navLink.module.scss'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useStoreBasket } from '@/Service/HandleBasket/handleBasket'
 
 function NavArticle() {
 
     const pathname = usePathname()
+    const storeBasket = useStoreBasket()
+
+    useEffect(()=>{
+        // storeBasket.loadData()
+    })
 
     return (
 
-        <div className={styles.container}>
+        <div className={styles.container} >
             <ul className={styles.wrapperLinks}>
 
                 <Link href="/articles/all_items" className={`${pathname === '/articles/all_items' ? styles.active_link : styles.link}`}>All</Link>
