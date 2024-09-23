@@ -26,6 +26,19 @@ function Shopping() {
 
 
   function handleClick() {
+  //   const body = document.querySelector('body')
+  //   const mask_body = document.querySelector('#mask_body_nav') as HTMLDivElement
+
+  // if (body && mask_body) {
+  //   if (showBasket === false) {
+  //     body.style.overflow = 'hidden'
+  //     mask_body.style.display = 'flex'
+  //   } else {
+  //     body.style.overflow = 'auto'
+  //     mask_body.style.display = 'none'
+  //   }
+  // }
+
     setShowBasket(!showBasket)
   }
 

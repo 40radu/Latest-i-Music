@@ -45,7 +45,6 @@ export const useStoreBasket = create<IStoreBasket>()(
         },
 
         save: (articles) => {
-            console.log(articles)
             set({ basket: articles })
             localStorage.setItem('basket', JSON.stringify(articles))
         },
@@ -82,11 +81,12 @@ export const useStoreBasket = create<IStoreBasket>()(
             let basket = get().basket;
             const foundProduct = basket.find((element) => (element.id === idArticle))
             if (foundProduct) {
-                foundProduct.quantity = newQuantity
+                foundProduct.quantity = foundProduct.quantity + newQuantity
                 get().save(basket)
                 if (foundProduct.quantity <= 0) {
-                    console.log(foundProduct.quantity)
-                    get().remove(foundProduct.id)
+                    // get().remove(foundProduct.id)
+                    foundProduct.quantity = 1
+                    get().save(basket)
                 }
             }
         },
