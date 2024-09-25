@@ -11,7 +11,7 @@ function Location() {
                 </div>
                 <div className={styles.wrapperInfo}>
                     <DetailsCard descriSecond='rue 265 750' descriFirst='Avenue de la prairie' title='location' src='location' />
-                    <DetailsCard descriSecond='209 584 787' descriFirst='205 584 789' title='phone' src='phone' />
+                    <DetailsCard descriSecond='+209 584 707' descriFirst='+205 584 780' title='phone' src='phone' />
                 </div>
             </div>
         </section>

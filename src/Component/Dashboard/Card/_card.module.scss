@@ -24,7 +24,7 @@
         width: 100%;
         font-size: 16px;
         font-weight: 400;
-        letter-spacing: text-space(16, 4);
+        letter-spacing: 0.9px;
         color: $black-40;
 
         @include media_laptop{
@@ -34,7 +34,7 @@
     }
 
     &:hover {
-        scale: 1.01;
+        scale: 1.005;
 
         img {
             filter: blur(1px);
@@ -48,15 +48,7 @@
     button {
         display: none;
         position: absolute;
-        left: 22%;
-
-        @include media_laptop{
-            left: 27%;
-            bottom: 42%;
-        }
-
-        @include media_mobile{
-            left: 29%;
-        }
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

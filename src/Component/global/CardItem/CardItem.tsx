@@ -8,17 +8,22 @@ import { ICardItem } from './typeCardItem'
 import Price from '../Price/Price'
 import Button from '../Button/page'
 import { useStoreBasket } from '@/Service/HandleBasket/handleBasket'
+import { useRouter } from 'next/navigation'
 
 
-function CardItem({ title , price , src , textButton , isPromo  , data }: ICardItem) {
+function CardItem({ title, price, src, textButton, isPromo, data }: ICardItem) {
 
     const storeBasket = useStoreBasket()
+    const router = useRouter()
 
-    function handleClickButton () {
-    
-        storeBasket.add(data)
-    //  basket.add(data)        
-    // localStorage.setItem('basket' , 'value of basket')
+    function handleClickButton() {
+        if (textButton === 'Add to the cart') {
+            storeBasket.add(data)
+        }
+
+        if(textButton === 'view similar'){
+            router.push(`/articles/${data.category}`)
+        }
 
     }
     return (
@@ -31,8 +36,8 @@ function CardItem({ title , price , src , textButton , isPromo  , data }: ICardI
                 <p className={styles.in_stock}>In stock</p>
                 <Price value={price} />
             </div>
-            
-            <Button className='addBasket' value={textButton != null ? textButton : 'Add to the cart'} onClick={handleClickButton}/>
+
+            <Button className='addBasket' value={textButton} onClick={handleClickButton} />
         </section>
     )
 }

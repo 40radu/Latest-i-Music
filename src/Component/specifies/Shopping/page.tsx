@@ -53,7 +53,7 @@ function Shopping() {
         <p className={styles.number}>{numberArticles}</p>
       </div>
 
-      {showBasket && <BodyBasket />}
+      {showBasket && <BodyBasket closeBasket={handleClick}/>}
 
     </div>
   )

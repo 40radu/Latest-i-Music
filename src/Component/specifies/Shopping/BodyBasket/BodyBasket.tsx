@@ -10,8 +10,13 @@ import imageClassic from '../../../../../public/Image/Article/classic.png'
 import imageAcoustic from '../../../../../public/Image/Article/acoustic.png'
 import iconRemove from '../../../../Icons/remove.svg'
 import Image from 'next/image'
+import closeIcon from '../../../../Icons/close.svg'
 
-function BodyBasket() {
+interface IBodyBasket {
+    closeBasket : ()=>void
+}
+
+function BodyBasket( {closeBasket} : IBodyBasket) {
     const storeBasket = useStoreBasket()
     const totalPrice = storeBasket.getTotalPrice()
     const articles = storeBasket.basket
@@ -55,18 +60,23 @@ function BodyBasket() {
         storeBasket.changeQuantity(idArticle , -1)
     }
 
+    function incrementQuantity(idArticle : string) {
+        storeBasket.changeQuantity(idArticle , 1)
+    }
+
     return (
 
-        <div className={styles.basket_body} id='basket_body'>
+        <div className={styles.basket_body} id='basket_body' >
 
             <h2>Basket</h2>
+
+            <button onClick={closeBasket} className={styles.btn_close}><Image src={closeIcon} alt=''/></button>
 
             <ul className={styles.wrapper_articles}>
 
                 {articles.length > 0 ?
 
                     articles.map((element, index) => {
-
 
                         return (
                             <li className={styles.article} key={index}>
@@ -85,7 +95,7 @@ function BodyBasket() {
                                         <span className={styles.title}>quantity</span> :
                                         <button onClick={()=>{decrementQuantity(element.id)}}>-</button>
                                         {element.quantity}
-                                        <button>+</button>
+                                        <button onClick={()=>{incrementQuantity(element.id)}}>+</button>
                                     </div>
                                     <p><span className={styles.title}>reference</span> : {element.id}</p>
                                 </div>

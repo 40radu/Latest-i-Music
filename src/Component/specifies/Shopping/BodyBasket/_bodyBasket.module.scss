@@ -29,6 +29,20 @@
         letter-spacing: text-space(16, 10);
     }
 
+    .btn_close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border: 1px solid $white;
+        border-radius: 50%;
+
+
+        &:hover {
+            scale: 1.05;
+            border-color: $red-83;
+        }
+    }
+
     .wrapper_articles {
         min-width: 100%;
         padding-top: 10px;
@@ -55,6 +69,7 @@
 
                 @apply flex flex-col justify-start items-start;
                 width: 165px;
+                row-gap: 3px;
 
                 .title {
                     font-weight: 600;
@@ -65,11 +80,12 @@
                 .wrapper_quantity{
                     @include flex(start, center,row);
                     column-gap: 8px;
+
                     button {
                         @apply flex justify-center items-center;
                         padding: 2px 10px 0;
                         border-radius: 2px;
-                        background-color: $black-25;
+                        background-color: $black-10;
                         height: 18px;
                     }
                 }

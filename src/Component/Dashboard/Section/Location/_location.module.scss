@@ -38,11 +38,6 @@
             align-items: center;
         }
 
-        // .title {
-        //     width: 100%;
-        //     @include flex(center, center,row);
-        // }
-
         .wrapperInfo {
             @include flex (space-between, center, row);
             width: 511px;

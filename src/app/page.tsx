@@ -15,6 +15,7 @@ export default function Home() {
         <History />
         <PopularItems />
         <Why />
+        <PopularItems title="new products"/>
         <Opinion />
         <Faq />
       </div>

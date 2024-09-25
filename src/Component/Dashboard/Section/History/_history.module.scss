@@ -3,29 +3,29 @@
 .history {
     width: 100%;
     height: fit-content;
-    padding: 80px 150px;
-    @include flex(center, start , column);
+    padding: 100px 150px 80px;
+    @include flex(center, start, column);
     row-gap: 10px;
 
     @include media_desktop {
-        padding: 80px 85px;
+        padding: 100px 85px 80px;
     }
 
     @include media_laptop {
-        padding: 80px 45px;
+        padding: 100px 45px 80px;
     }
 
     @include media_mobile {
-        padding: 50px 20px;
+        padding: 80px 20px;
     }
-    
+
 
     .wrapper {
         width: 100%;
         height: fit-content;
         @include flex(space-between, start, row);
 
-        @media (min-width : 1441px){
+        @media (min-width : 1441px) {
             justify-content: start;
             column-gap: 230px;
         }
@@ -39,7 +39,7 @@
             row-gap: 20px;
         }
 
-        .text_zone{
+        .text_zone {
             width: 510px;
             height: fit-content;
             @include flex(start, start, column);
@@ -50,12 +50,12 @@
                 width: 100%;
             }
 
-            h4{
+            h4 {
                 font-size: 21px;
                 font-weight: 800;
                 color: $black-40;
                 text-transform: capitalize;
-                letter-spacing: text-space (21,8);
+                letter-spacing: text-space(21, 8);
             }
 
             .descri {
@@ -63,11 +63,11 @@
                 font-size: 14px;
                 font-weight: 400;
                 color: $black-40;
-                letter-spacing: text-space (14,10);
+                letter-spacing: text-space(14, 10);
             }
         }
 
-        .image{
+        .image {
             @include media_laptop {
                 width: 325px;
             }

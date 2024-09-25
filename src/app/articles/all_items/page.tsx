@@ -8,6 +8,9 @@ import imageElectric from '../../../../public/Image/Article/electric.png'
 import imageElectroAcoustic from '../../../../public/Image/Article/electro_acoustique.png'
 import imageUkulele from '../../../../public/Image/Article/ukulele.png'
 
+export const shuffleArray = (array: IArticle[]) => {
+  return array.sort(() => Math.random() - 0.5);
+};
 
 async function AllItems() {
 
@@ -15,26 +18,25 @@ async function AllItems() {
   const res = await fetch (`${apiUrl}/api/allArticles` , {cache : 'no-store'})
   const data = await res.json() as IArticle[]
 
-  const shuffleArray = (array: IArticle[]) => {
-    return array.sort(() => Math.random() - 0.5);
-  };
-  console.log(shuffleArray(data))
+  
+  shuffleArray(data)
+  // console.log(shuffleArray(data))
   return (
     <>
       {data.map((element) => {
         if (element.category === 'acoustic') {
-          return (<CardItem price={element.price} title={element.name}  data={element}   src={imageAcoustic} />)
+          return (<CardItem price={element.price} title={element.name}  data={element}   src={imageAcoustic} textButton='Add to the cart'  />)
         }
         if (element.category === 'bass') {
-          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageBass} />)
+          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageBass} textButton='Add to the cart'  />)
         } if (element.category === 'classic') {
-          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageClassic} />)
+          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageClassic} textButton='Add to the cart'  />)
         } if (element.category === 'electric') {
-          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageElectric} />)
+          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageElectric} textButton='Add to the cart'/>)
         } if (element.category === 'electroAcoustic') {
-          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageElectroAcoustic} />)
+          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageElectroAcoustic} textButton='Add to the cart'  />)
         } if (element.category === 'ukulele') {
-          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageUkulele} />)
+          return (<CardItem price={element.price} title={element.name}  data={element}  src={imageUkulele} textButton='Add to the cart'  />)
         }
       })}
     </>

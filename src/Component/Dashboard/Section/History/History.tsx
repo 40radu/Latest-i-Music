@@ -4,10 +4,11 @@ import Title from '@/Component/global/Title/Title'
 import Button from '@/Component/global/Button/page'
 import Image from 'next/image'
 import imageHistory from '../../../../../public/Image/Dashboard/history.png'
+import Link from 'next/link'
 
 function History() {
     return (
-        <section className={styles.history}>
+        <section className={styles.history} id='history'>
             <Title value='our history' />
             <div className={styles.wrapper}>
                 <div className={styles.text_zone}>
@@ -20,10 +21,12 @@ function History() {
                         to share our love of guitars with everyone. So we created our
                         agency to sell guitars, and it's within everyone's reach.
                     </p>
-                    <Button className='primary' value='About us' />
+                    <Link href='/contact'>
+                        <Button className='primary' value='Get in touch' />
+                    </Link>
                 </div>
 
-                <Image src={imageHistory} alt='' className={styles.image}/>
+                <Image src={imageHistory} alt='' className={styles.image} />
             </div>
         </section>
     )

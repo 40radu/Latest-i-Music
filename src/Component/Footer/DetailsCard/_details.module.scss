@@ -7,18 +7,13 @@
     column-gap: 15px;
     min-width: 188.33px;
 
-    .image {
-        height: 30px;
-        width: 32px;
-    }
-
     .text_zone {
         @include flex(start, start,column);
         row-gap: 6px;
         h6 {
             font-size: 20px;
             font-weight: 700;
-            letter-spacing: text-space(20,8);
+            letter-spacing: 0.9px;
             text-transform: uppercase;
             color: $white;
 
@@ -30,7 +25,7 @@
         .descri {
             font-size: 12px;
             font-weight: 700;
-            letter-spacing: text-space(10,8);
+            letter-spacing: 0.9px;
             text-transform: capitalize;
             color: $black-secondary;
         }

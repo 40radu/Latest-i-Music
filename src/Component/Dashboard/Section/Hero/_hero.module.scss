@@ -21,7 +21,7 @@
     }
 
     @include media_mobile {
-        background-image:url('/Image/Dashboard/hero_mobile.png') !important;
+        background-image: url('/Image/Dashboard/hero_mobile.png') !important;
     }
 
     @include media_mobile {
@@ -36,6 +36,16 @@
         letter-spacing: text-space(68, 4);
         color: $white;
         text-transform: uppercase;
+
+        span {
+            color: $red;
+        }
+
+        .text_lower {
+            text-transform: lowercase;
+            color: $white;
+        }
+
 
         @include media_laptop {
             font-size: 55px;
@@ -59,7 +69,7 @@
         max-width: 592px;
         font-size: 18px;
         font-weight: 400;
-        letter-spacing: text-space(18, 4);
+        letter-spacing: 0.9px;
         color: $white;
 
     }
@@ -69,6 +79,29 @@
         @include flex(start, start, row);
         column-gap: 32px;
         padding-bottom: 100px;
+
+        .btn_contact_hero {
+            width: fit-content;
+            padding: 15px 60px;
+            background-color: $red;
+            color: $white;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.96px;
+            border-radius: 2px;
+            border: 1px $red solid;
+            text-transform: capitalize;
+            text-wrap: nowrap;
+
+            &:hover {
+                border-color: $white-80;
+            }
+
+            @include media_laptop {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+        }
 
         @include media_mobile {
             justify-content: space-between;

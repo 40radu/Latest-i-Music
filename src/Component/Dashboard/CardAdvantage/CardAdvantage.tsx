@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './_cardAdv.module.scss'
 import deliveryIc from '../../../Icons/delivery.svg'
 import qualityIc from '../../../Icons/quality.svg'
-import priceIc from '../../../Icons/price.svg'
+import priceIc from '../../../Icons/money.svg'
 import Image from 'next/image'
 
 interface ICardAdvantage {
