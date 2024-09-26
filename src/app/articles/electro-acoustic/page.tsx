@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import image from '../../../../public/Image/Article/electro_acoustique.png'
 import { IArticle } from '../typeBass'
 import next from 'next'
-
+import styles from '../_layoutArticle.module.scss'
 
 async function page() {
 
@@ -17,11 +17,11 @@ async function page() {
     
 
     return (
-        <>
+        <section className={styles.container_article}>
             {data.map((element)=>{
                 return (<CardItem data={element} price={element.price} title={element.name} src={image} textButton='Add to the cart'/>)
             })}
-        </>
+        </section>
     )
 }
 

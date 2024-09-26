@@ -1,4 +1,4 @@
 export interface INavLink {
-    href : '/' | '/articles' | '/contact';
+    href : '/' | '/articles/all_items' | '/contact';
     value : 'home' | 'articles' | 'contact'
 }

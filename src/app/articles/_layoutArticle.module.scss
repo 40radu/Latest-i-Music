@@ -1,7 +1,8 @@
 @import '../../app/mixins';
 
 .container_article {
-    @apply  grid grid-cols-5 justify-items-center p-12 gap-5;
+    @apply  grid grid-cols-5 justify-items-center p-12 gap-7 relative;
+    min-height: 90vh;
 
     @media (max-width : 1440px){
         @apply grid-cols-4;
@@ -9,16 +10,18 @@
 
     @include media_laptop {
         @apply grid-cols-3;
+        min-height: 116vh;
     }
 
     @include media_tab_portrait{
-        @apply grid-cols-2
+        @apply grid-cols-2;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     @include media_mobile {
-        @apply grid-cols-1;
-        gap: 20px;
-        padding: 20px;
+        
+        padding: 16px;
     }
 
 }

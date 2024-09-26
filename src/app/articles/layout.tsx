@@ -10,13 +10,7 @@ function ArticleLayourt({
     return (
         <div>
             <NavArticle />
-
-            <section className={styles.container_article}>
-
                 {children}
-
-            </section>
-
         </div>
     )
 }

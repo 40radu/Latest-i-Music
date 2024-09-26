@@ -1,16 +1,14 @@
-@import '../../../app/mixins';
+@import '../mixins';
+
 .wrapper_card {
     height: fit-content;
     @include flex (start, start, column);
-    row-gap: 5px;
+    row-gap: 7px;
     width: 240px;
     position: relative;
+    margin: 50px;
     padding-bottom: 20px;
     cursor: pointer;
-
-    @include media_mobile {
-        width: fit-content;
-    }
 
     .promo {
         position: absolute;
@@ -36,21 +34,17 @@
     .containerImg {
         width: fit-content;
         height: fit-content;
-        padding-top: 10px;
-        max-width: 240px;
-        max-height: 260px;
+        min-width: 240px;
+        min-height: 240px;
         background-color: $gray-35;
         border-radius: 2px;
 
-        @include media_mobile {
-            max-width: 175px;
-            min-height: 185px;
-        }
+
     }
 
     .title {
         width: 100%;
-        padding-top: 10px;
+
         p {
             font-size: 14px;
             font-weight: 700;
@@ -95,12 +89,23 @@
 
             &::before {
                 content: '';
-                width: 7px;
-                height: 7px;
+                width: 5px;
+                height: 5px;
                 border-radius: 50%;
                 background-color: $green;
             }
         }
 
+        // .stock{
+        //     &::before{
+        //         background-color: $green;
+        //     }
+        // }
+
+        // .delivery {
+        //     &::before{
+        //         background-color: $red;
+        //     }
+        // }
     }
 }

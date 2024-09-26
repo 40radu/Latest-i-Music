@@ -11,33 +11,37 @@ import { useStoreBasket } from '@/Service/HandleBasket/handleBasket'
 import { useRouter } from 'next/navigation'
 
 
-function CardItem({ title, price, src, textButton, isPromo, data }: ICardItem) {
+function CardItem({ title, price, src, promo, data }: ICardItem) {
 
-    const storeBasket = useStoreBasket()
-    const router = useRouter()
+    // const storeBasket = useStoreBasket()
+    // const router = useRouter()
 
-    function handleClickButton() {
-        if (textButton === 'Add to the cart') {
-            storeBasket.add(data)
-        }
+    // function handleClickButton() {
+    //     if (textButton === 'Add to the cart') {
+    //         storeBasket.add(data)
+    //     }
 
-        if(textButton === 'view similar'){
-            router.push(`/articles/${data.category}`)
-        }
+    //     if (textButton === 'view similar') {
+    //         router.push(`/articles/${data.category}`)
+    //     }
 
-    }
+    // }
     return (
         <section className={styles.wrapper_card}>
-            {isPromo && <div className={styles.promo}>-20%</div>}
-            <Image src={src} alt='' className={styles.image} />
-            <div className={styles.info}>
-                {/* <TitleCard value={title} /> */}
-                <p className={styles.descri}>{title}</p>
-                <p className={styles.in_stock}>In stock</p>
-                <Price value={price} />
-            </div>
+            {promo && <div className={styles.promo}>-{promo}%</div>}
 
-            <Button className='addBasket' value={textButton} onClick={handleClickButton} />
+            <div className={styles.containerImg}>
+                <Image src={src} alt='' className={styles.image} />
+            </div>
+            <div className={styles.title}>
+                <p className={styles.name}>{title}</p>
+                <p className={styles.category}><span>*</span>{data.category}</p>
+            </div>
+            <p className={styles.price}>{price}.<span>00</span> $</p>
+            <div className={styles.info}>
+                <p className={styles.stock}>In stock</p>
+                <p className={styles.delivery}>free delivery</p>
+            </div>
         </section>
     )
 }

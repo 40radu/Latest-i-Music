@@ -25,7 +25,7 @@ function NavBar() {
 
                 <ul className={styles.navLinks}>
                     <Navlink href='/' value='home' />
-                    <Navlink href='/articles' value='articles' />
+                    <Navlink href='/articles/all_items' value='articles' />
                     <Navlink href='/contact' value='contact' />
                     <SearchZone />
                     <Shopping />

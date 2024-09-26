@@ -14,7 +14,7 @@ export interface ICardItem {
     price : number;
     src : StaticImageData;
     textButton : "Add to the cart" | "Get in touch" | "About us" | "Send" | "Discover" | "buy" | "view similar";
-    isPromo? : boolean;
+    promo? : boolean;
     data : IData
 }
 

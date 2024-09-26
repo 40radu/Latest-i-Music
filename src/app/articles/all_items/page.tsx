@@ -8,7 +8,7 @@ import imageElectric from '../../../../public/Image/Article/electric.png'
 import imageElectroAcoustic from '../../../../public/Image/Article/electro_acoustique.png'
 import imageUkulele from '../../../../public/Image/Article/ukulele.png'
 
-
+import styles from '../_layoutArticle.module.scss'
 
 async function AllItems() {
 
@@ -22,7 +22,7 @@ async function AllItems() {
   const data = shuffleArray(allArticles)
   // console.log(shuffleArray(data))
   return (
-    <>
+    <section className={styles.container_article}>
       {data.map((element) => {
         if (element.category === 'acoustic') {
           return (<CardItem price={element.price} title={element.name} data={element} src={imageAcoustic} textButton='Add to the cart' />)
@@ -39,7 +39,7 @@ async function AllItems() {
           return (<CardItem price={element.price} title={element.name} data={element} src={imageUkulele} textButton='Add to the cart' />)
         }
       })}
-    </>
+    </section>
   )
 }
 
