@@ -16,7 +16,7 @@ function CardDash({ descri , type , title} : ICardDash) {
     return (
         <div className={styles.card_container}>
             {type === 'guitar'? <Image src={guitareImg} alt={type}/> : ''}
-            {type === 'bass guitar'? <Image src={basseImg} alt={type}/> : ''}
+            {type === 'bass guitar'? <Image src={basseImg} alt={type}/> : ''}   
             {type === 'ukulele'? <Image src={ukuleleImg} alt={type}/> : ''}
             <TitleCard value={title} />
             <p className={styles.descri}>

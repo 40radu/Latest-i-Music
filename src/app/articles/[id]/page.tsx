@@ -14,6 +14,8 @@ import { notFound } from 'next/navigation'
 import PopularItems from '@/Component/Dashboard/Section/PopularItems/PopularItems'
 import ShieldIcon from '@/Component/Icons/Shield/shieldIcon'
 
+export const revalidate = 60 
+
 export async function generateStaticParams() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     const res = await fetch(`${apiUrl}/api/allArticles`)
@@ -41,16 +43,16 @@ interface IParams {
     }
 }
 
-const products = [
-    {
-        label: "first product",
-        icon: ShieldIcon
-    },
-    {
-        label: "second product",
-        icon: ShieldIcon
-    },
-]
+// const products = [
+//     {
+//         label: "first product",
+//         icon: ShieldIcon
+//     },
+//     {
+//         label: "second product",
+//         icon: ShieldIcon
+//     },
+// ]
 
 async function page({ params }: IParams) {
 
@@ -96,7 +98,6 @@ async function page({ params }: IParams) {
                     </div>
 
                     <p className={styles.descriItem}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est omnis dolorem voluptatum modi voluptates dolorum reiciendis, atque cum recusandae vel soluta? Praesentium eaque velit quisquam enim ipsa quidem vitae natus!</p>
-                    {/* <Link href={`/articles/${category}`} className={styles.view_similar}> View similar <Image src={arrowRighticn} alt=''></Image> </Link> */}
                     <Button className='fourthly' value='view similar'/>
                 </div>
 
