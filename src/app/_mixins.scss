@@ -1,6 +1,8 @@
 $white : #fff;
 $white-80 : rgba(255, 255, 255, 0.8);
 $red : #E11D07;
+$red-secondary : #ff0000;
+$red-90 : rgba(255, 0, 0, 0.90);
 $red-83 : rgba(225, 29, 7, 0.83);
 $red-50 : rgba(225, 29, 7, 0.5);
 $black-40 : rgba(0, 0, 0, 0.45);
@@ -8,14 +10,15 @@ $black-15 : rgba(0, 0, 0, 0.15);
 $black-10 : rgba(0, 0, 0, 0.1);
 $black-25 : rgba(0, 0, 0, 0.25);
 $black-50 : rgba(0, 0, 0, 0.50);
+$black-65 : rgba(0, 0, 0, 0.60);
 $black-75 : rgba(0, 0, 0, 0.75);
 $black-secondary : rgba(49, 39, 39, 0.82);
 $black: #2C2C2C;
 $gray : #D9D9D9;
-$gray-35 : rgb(217 217 217 / 25%);
+$gray-35 : rgba(217, 217, 217, 0.25);
 $green : #56DF5C;
 
-$breakpoints : ("desktop" : 1280px, "laptop": 1024px, "tab_landscape" : 992px , "tab_portrait" : 768px, "mobile":480px);
+$breakpoints : ("desktop" : 1280px, "laptop": 1024px, "tab_landscape" : 992px, "tab_portrait" : 768px, "mobile":480px);
 
 @function text-space ($sizeValue, $valueP) {
     @return ((($sizeValue * $valueP)/100)*1px)
@@ -62,5 +65,6 @@ $breakpoints : ("desktop" : 1280px, "laptop": 1024px, "tab_landscape" : 992px , 
     @media (max-width : map-get($breakpoints , "mobile")) {
         @content;
     }
-};
+}
 
+;

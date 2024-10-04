@@ -7,7 +7,7 @@
     font-weight: 700;
     color: $black;
     text-transform: uppercase;
-    letter-spacing: text-space(21,8);
+    letter-spacing: 0.9px;
 
     @include media_laptop {
         font-size: 16px;

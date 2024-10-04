@@ -13,21 +13,14 @@ import { useRouter } from 'next/navigation'
 
 function CardItem({ title, price, src, promo, data }: ICardItem) {
 
-    // const storeBasket = useStoreBasket()
-    // const router = useRouter()
+    const router = useRouter()
 
-    // function handleClickButton() {
-    //     if (textButton === 'Add to the cart') {
-    //         storeBasket.add(data)
-    //     }
+    function handleClick () {
+        router.push(`/articles/${data.id}`)
+    }
 
-    //     if (textButton === 'view similar') {
-    //         router.push(`/articles/${data.category}`)
-    //     }
-
-    // }
     return (
-        <section className={styles.wrapper_card}>
+        <section className={styles.wrapper_card} onClick={handleClick}>
             {promo && <div className={styles.promo}>-{promo}%</div>}
 
             <div className={styles.containerImg}>

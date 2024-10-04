@@ -14,7 +14,9 @@
 
         @include media_desktop {
             padding-left: 80px;
-        };
+        }
+
+        ;
 
         @include media_laptop {
             padding-left: 45px;
@@ -26,52 +28,48 @@
     }
 
     .swiper {
-        width: 100%;    
-        padding-bottom: 20px;
+        width: 100%;
+        padding: 50px 100px;
 
-        .swiper-wrapper {
-            width: 100%;
-
-            .swiper-slide {
-                width: fit-content;
-                padding: 50px 0 50px 150px;
-
-                @include media_desktop {
-                    padding-left: 80px;
-                }
-
-                @include media_laptop {
-                    padding-left: 45px;
-                }
-
-
-                @include media_mobile {
-                    padding-left: 20px;
-                }
-            }
-
-            
-
+        @include media_desktop {
+            padding: 50px;  
         }
 
-        .swiper-button-prev , .swiper-button-next {
+        @include media_tab_portrait {
+            padding: 50px 8px;
+        }
+
+        @include media_mobile {
+            padding: 50px 0;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
             color: $red;
 
             @include media_laptop {
-               display: none;
+                display: none;
             }
-            
+
         }
 
         .swiper-button-prev {
-            left: 50px;
+            left: 20px;
+
             @include media_desktop {
                 left: 20px;
             }
         }
 
         .swiper-button-next {
-            right: 50px;
+            right: 20px;
+
             @include media_desktop {
                 right: 20px;
             }

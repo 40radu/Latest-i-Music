@@ -16,7 +16,6 @@
         left: 0;
         top: 0;
         z-index: 10;
-        display: none;
     }
 
     .navbar {
@@ -51,6 +50,7 @@
 
         .logo_mobile {
             display: none;
+
             @include media_mobile {
                 display: block;
             }
@@ -66,6 +66,19 @@
 
             @include media_tab_portrait {
                 display: none;
+            }
+
+            .link {
+                font-size: 16px;
+                font-weight: 800;
+                letter-spacing: text-space(16, 14);
+                text-transform: uppercase;
+                color: $black-40;
+            }
+
+            .active_link {
+                @extend .link;
+                color:$black-65;
             }
 
 

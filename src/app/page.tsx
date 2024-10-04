@@ -16,7 +16,7 @@ export default function Home() {
         <PopularItems />
         <Why />
         <PopularItems title="new products"/>
-        <Opinion />
+        <Opinion /> 
         <Faq />
       </div>
     </main>

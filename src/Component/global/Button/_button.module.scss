@@ -15,9 +15,9 @@
     @include flex(center, center, row);
 
     &:hover {
-        color: $black-50;
-        border-color: $black-25;
-        background-color: transparent
+        background-color: $red-90;
+        border-color: $red-90;
+        color: $white;
     }
 
     @include media_laptop {
@@ -34,11 +34,27 @@
 
 .secondary {
     @extend .primary;
-    border: 1px solid $white;
-    background-color: transparent;
+    color: $white;
+    border-color: $white;
+    background-color: $black-10;
 
     &:hover {
+        background-color: transparent;
         border-color: $white;
-        color: $white;
     }
+}
+
+.third {
+    @extend .primary;
+    border: 1px solid transparent;
+    background-color: #ff00000f;
+    // background-color: $gray-35;
+    color: $red-secondary;
+}
+
+.fourthly {
+    @extend .primary;
+    color: $black-50;
+    border-color: $black-25;
+    background-color: transparent;
 }

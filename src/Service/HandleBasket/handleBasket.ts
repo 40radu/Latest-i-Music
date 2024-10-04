@@ -9,7 +9,7 @@ interface ISave {
     category: 'bass' | 'acoustic' | 'electric' | 'electroAcoustic' | 'ukulele' | 'classic'
 };
 
-interface IAdd {
+export interface IAdd {
     id: string;
     name: string;
     quantity?: number;

@@ -1,4 +1,5 @@
 @import '../../../app/mixins';
+
 .wrapper_card {
     height: fit-content;
     @include flex (start, start, column);
@@ -37,20 +38,27 @@
         width: fit-content;
         height: fit-content;
         padding-top: 10px;
-        max-width: 240px;
-        max-height: 260px;
+        width: 240px;
+        height: 240px;
         background-color: $gray-35;
         border-radius: 2px;
 
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         @include media_mobile {
-            max-width: 175px;
-            min-height: 185px;
+            width: 173px;
+            height: 173px;
         }
     }
 
     .title {
         width: 100%;
         padding-top: 10px;
+
         p {
             font-size: 14px;
             font-weight: 700;

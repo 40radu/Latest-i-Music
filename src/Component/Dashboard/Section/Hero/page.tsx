@@ -13,7 +13,7 @@ function Hero() {
             </p>
             <div className={styles.banner_button}>
                 <Link href='/articles'>
-                    <button className={styles.btn_contact_hero}>Let's discover !</button>
+                    <Button className='primary' value="let's discover"/>
                 </Link>
                 <Link href='#history'>
                     <Button value='About us' className='secondary' />

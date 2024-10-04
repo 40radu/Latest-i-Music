@@ -2,44 +2,40 @@
 
 import React, { useState } from 'react'
 import styles from './_menu_bar.module.scss'
-import Navlink from '@/Component/global/NavLink/page'
 import Image from 'next/image'
 import menu_barIc from '../../../Icons/menu_bar.svg'
 import Link from 'next/link'
+import { useStoreStateNavMobil } from '@/Service/HandleMenuBarBtnSearch/stateMenuSearch'
 
 function Menu_bar() {
-    const [showMenu, setShowMenu] = useState(false)
+    const stateShowMenu = useStoreStateNavMobil()
+    const showMenu = stateShowMenu.menuBar
 
     function handleClick() {
         const body: HTMLBodyElement | null = document.querySelector('body');
         const mask_body =  document.querySelector('#mask_body_nav') as HTMLDivElement
-
-        if (showMenu === false) {
-            if (body && mask_body) {
-                body.style.overflow = 'hidden'
-                mask_body.style.display = 'block'
-            }
+        
+        if(showMenu === false) {
+            stateShowMenu.seeMenuBar()
+        } else {
+            stateShowMenu.hide()
         }
 
-        if (showMenu === true) {
-            if (body && mask_body) {
-                body.style.overflow = 'auto'
-                mask_body.style.display = 'none'
+    }
 
-            }
-        }
-        setShowMenu(!showMenu)
-
+    function hideMenu () {
+        stateShowMenu.hide()
+        
     }
     return (
 
         <div className={styles.menu_bar}>
             <Image src={menu_barIc} alt='menu' className={styles.image} onClick={handleClick} />
             {showMenu &&
-                <ul>
-                    <Link href="/" onClick={handleClick}>home</Link>
-                    <Link href="/articles" onClick={handleClick}>articles</Link>
-                    <Link href="/contact" onClick={handleClick}>contact</Link>
+                <ul id='linksNavigation'>
+                    <Link href="/" onClick={hideMenu}>home</Link>
+                    <Link href="/articles" onClick={hideMenu}>articles</Link>
+                    <Link href="/contact" onClick={hideMenu}>contact</Link>
                 </ul>}
         </div>
 

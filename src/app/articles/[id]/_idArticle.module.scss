@@ -3,87 +3,41 @@
 
 .container {
     @apply w-screen relative grid grid-cols-2 justify-items-center;
-    padding: 50px 0;
+    padding: 50px;
 
     @media (min-width : 1441px) {
         padding: 50px 150px;
     }
 
     @include media_tab_portrait {
-        padding: 50px 25px 180px;
+        padding: 50px 0;
     }
 
-    @include media_mobile {
-        grid-template-columns : repeat(1, minmax(0, 1fr));
+    @include media_mobile { 
+        padding-left: 25px;
+        padding-right: 25px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         padding-bottom: 80px;
 
-    };
-
-    .imgZone {
-        @apply w-fit h-fit;
-        @include flex(start, start, column);
-
-        .wrapper_mainImg {
-            width: 500px;
-            height: 500px;
-
-            @include media_laptop {
-                width: 400px;
-            }
-
-            @include media_mobile {
-                width: 100%;
-                height: fit-content;
-            }
-        }
-
-        .wrapper_othersImg {
-            width: 500px;
-            @include flex(space-between, center, row);
-            padding-top: 20px;
-
-            @include media_laptop {
-                width: 400px;
-            }
-
-            @include media_tab_portrait{
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: 30px;
-            }
-
-            @include media_mobile {
-                position: static;
-                width: 100%;
-                transform: none;
-
-            }
-
-            li {
-                width: 136px;
-                height: 136px;
-                padding: 10px;
-                border: 2px solid $gray-35;
-
-                @include media_laptop {
-                    width: 106px;
-                    height: 106px;
-                }
-
-                @include media_mobile {
-                    width: 90px;
-                    height: 90px;
-                }
-            }
-        }
     }
+
+    ;
+
+   
 
     .descriZone {
         @apply w-fit h-fit flex flex-col;
         row-gap: 12px;
-        max-width: 350px;
+        max-width: 500px;
         padding-top: 36px;
+
+        @include media_laptop {
+            max-width: 350px;
+        }
+
+        @include media_tab_portrait {
+            max-width: 300px;
+        }
 
         @include media_mobile {
             width: 100%;
@@ -91,6 +45,7 @@
 
         p {
             letter-spacing: 0.9px;
+
             @include media_laptop {
                 font-size: 14px;
             }
@@ -127,7 +82,7 @@
             .number {
                 font-size: 25px;
                 font-weight: 700;
-                color: $green;
+                color: $red-secondary;
 
                 .lower {
                     font-size: 22px
@@ -156,19 +111,18 @@
         }
 
         .descriItem {
-            padding-top: 12px;
+            padding:12px 0;
             color: $black;
             letter-spacing: 0.9px;
-            min-width: 450px;
-
-            @include media_laptop {
-                min-width: 0;
-                max-width: 350px;
-            }
 
             @include media_mobile {
                 width: 100%;
             }
+        }
+
+        .view_similar {
+            @include flex (start, center, row);
+            letter-spacing: 0.9px;
         }
     }
 }

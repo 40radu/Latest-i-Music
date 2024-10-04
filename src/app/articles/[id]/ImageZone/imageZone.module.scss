@@ -1,0 +1,131 @@
+@import '../../../mixins';
+
+.imgZone {
+    @apply w-fit h-fit;
+    width: 100%;
+    @include flex(center, start, row);
+    position: relative;
+    column-gap: 55px;
+
+    @include media_mobile {
+        flex-direction: column-reverse;
+    }
+
+    .wrapper_mainImg {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background-size: 100%;
+
+        li {
+            width: 100%;
+            height: 100%;
+
+            .loupe {
+                display: none;
+                position: absolute; // Maintenant la loupe est relative à l'image
+                width: 100px;
+                height: 100px;
+                // background-image: url('/Image/Article/acoustic.png'); // falcult
+                background-size: 150%; // Zoom de 2x
+                background-repeat: no-repeat;
+                background-color: white;
+                padding: 20px;
+                cursor: none;
+                pointer-events: none;
+                border-radius: 2px;
+                border: 1px solid $black-10;
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 0;
+            }
+
+        }
+
+
+
+
+
+        @include media_laptop {
+            width: 300px;
+            height: 300px;
+        }
+
+        @include media_mobile {
+            width: 100%;
+            height: fit-content;
+        }
+    }
+
+    // .wrapper_mainImg.active::after {
+    //     display: block;
+    // }
+
+    .wrapper_othersImg {
+        width: fit-content;
+        height: 400px;
+        @include flex(center, center, column);
+        row-gap: 20px;
+        position: relative;
+        z-index: 10;
+
+        @include media_tab_portrait {
+            flex-direction: row;
+            justify-content: space-between;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -50%;
+            height: fit-content;
+            width: 300px;
+        }
+
+        @include media_mobile {
+            position: static;
+            width: 100%;
+            transform: none;
+            justify-content: space-around;
+
+        }
+
+        li {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid $gray-35;
+            cursor: pointer;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+
+            @include media_tab_portrait {
+                width: 90px;
+                height: 90px;
+            }
+
+
+            @include media_mobile {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+
+    }
+}

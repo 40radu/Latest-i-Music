@@ -23,10 +23,10 @@ import 'swiper/css/pagination';
             <Swiper
                 className='wrapperAll'
                 cssMode={true}
-                slidesPerView={'auto'}
+                slidesPerView={2}
                 spaceBetween={0}
                 navigation={true}
-                pagination={{ clickable: true }}
+                pagination={{ clickable: false }}
                 mousewheel={true}
                 keyboard={true}
                 // a11y={true}
@@ -44,7 +44,12 @@ import 'swiper/css/pagination';
 
             //   }}
 
-            // breakpoints={{1024 : {slidesPerView : 2 , spaceBetween : 50}}}
+            breakpoints={{
+                768 : {slidesPerView : 3},
+                1025 : {slidesPerView : 4},
+                1441 : {slidesPerView : 5}
+
+            }}
 
 
             >

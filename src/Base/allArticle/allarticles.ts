@@ -323,7 +323,7 @@ export const dataAll = [
     {
         id: '9f',
         price: 27,
-        name: 'MAHALO MA1TK',
+        name: 'MAHALO M05',
         category : 'ukulele'
 
     },

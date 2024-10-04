@@ -9,11 +9,6 @@ import { useStoreBasket } from '@/Service/HandleBasket/handleBasket'
 function NavArticle() {
 
     const pathname = usePathname()
-    const storeBasket = useStoreBasket()
-
-    useEffect(()=>{
-        // storeBasket.loadData()
-    })
 
     return (
 
