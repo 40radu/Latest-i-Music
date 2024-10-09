@@ -6,11 +6,11 @@ import searchLogo from '../../../Icons/search.svg'
 import styles from './_searchZone.module.scss'
 import Link from 'next/link'
 import { IAdd } from '@/Service/HandleBasket/handleBasket'
-import { useStoreStateNavMobil } from '@/Service/HandleMenuBarBtnSearch/stateMenuSearch'
+import { useStoreStateNav } from '@/Service/HandleMenuBarBtnSearch/stateMenuSearch'
 
 function SearchZone() {
 
-    const stateShowSearch = useStoreStateNavMobil()
+    const stateShowSearch = useStoreStateNav()
 
     const showSearch = stateShowSearch.search
 
@@ -77,7 +77,7 @@ function SearchZone() {
                                         allData.filter((element) => (element.category && element.category.toLowerCase().includes(valueInput.toLocaleLowerCase()))).
                                             filter((element, index) => (index == 0 || index == 10 || index == 20 || index == 30 || index == 40 || index == 50)).
                                             map((element, index) => (
-                                                <Link key={index} href={`/articles/${element.category}`} onClick={handleClick}><p>{element.category}</p></Link>
+                                                <Link key={index} href={`/articles/${element.category}`} onClick={hideSearch}><p>{element.category}</p></Link>
                                             ))
                                     )
                                     : ''
@@ -90,7 +90,7 @@ function SearchZone() {
                                     (
                                         allData.filter((element) => (element.id && element.id.toLowerCase().includes(valueInput.toLocaleLowerCase()))).
                                             map((element, index) => (
-                                                <Link key={index} href={`/articles/${element.id}`} onClick={handleClick}><p>{element.name} / {element.category}</p></Link>
+                                                <Link key={index} href={`/articles/${element.id}`} onClick={hideSearch}><p>{element.name} / {element.category}</p></Link>
                                             ))
                                     )
                                     : ''
@@ -103,7 +103,7 @@ function SearchZone() {
                                     (
                                         allData.filter((element) => (element.name && element.name.toLowerCase().includes(valueInput.toLocaleLowerCase()))).
                                             map((element, index) => (
-                                                <Link key={index} href={`/articles/${element.id}`} onClick={handleClick}><p>{element.name} / {element.category} </p></Link>
+                                                <Link key={index} href={`/articles/${element.id}`} onClick={hideSearch}><p>{element.name} / {element.category} </p></Link>
                                             ))
                                     )
                                     : ''

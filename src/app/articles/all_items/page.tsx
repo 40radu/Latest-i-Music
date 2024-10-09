@@ -33,7 +33,7 @@ async function AllItems() {
           return (<CardItem price={element.price} title={element.name} data={element} src={imageClassic} textButton='Add to the cart' />)
         } if (element.category === 'electric') {
           return (<CardItem price={element.price} title={element.name} data={element} src={imageElectric} textButton='Add to the cart' />)
-        } if (element.category === 'electroAcoustic') {
+        } if (element.category === 'electro-acoustic') {
           return (<CardItem price={element.price} title={element.name} data={element} src={imageElectroAcoustic} textButton='Add to the cart' />)
         } if (element.category === 'ukulele') {
           return (<CardItem price={element.price} title={element.name} data={element} src={imageUkulele} textButton='Add to the cart' />)

@@ -30,6 +30,10 @@
             text-transform: capitalize;
             letter-spacing: 0.9px;
             text-decoration: none;
+
+            &:hover {
+                color: $black;
+            }
         }
     }
 }

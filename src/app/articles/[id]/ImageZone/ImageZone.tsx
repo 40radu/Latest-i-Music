@@ -26,7 +26,7 @@ import classicImg3 from '../../../../../public/Image/Article/classic3.png'
 import { lchown } from 'fs'
 
 interface IImageZone {
-    category: "acoustic" | "bass" | "classic" | "electric" | "electroAcoustic" | "ukulele"
+    category: "acoustic" | "bass" | "classic" | "electric" | "electro-acoustic" | "ukulele"
 }
 
 function ImageZone({ category }: IImageZone) {
@@ -132,7 +132,7 @@ function ImageZone({ category }: IImageZone) {
                 loupe3.style.backgroundImage = "url('/Image/Article/ukulele3.png')"
             }
         }
-        if (category == 'electroAcoustic') {
+        if (category == 'electro-acoustic') {
             setImg1(electroAcousticImg1)
             setImg2(electroAcousticImg2)
             setImg3(electroAcousticImg3)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './_bodyBasket.module.scss'
 import Button from '@/Component/global/Button/page'
 import { useStoreBasket } from '@/Service/HandleBasket/handleBasket'
@@ -13,13 +13,14 @@ import Image from 'next/image'
 import closeIcon from '../../../../Icons/close.svg'
 
 interface IBodyBasket {
-    closeBasket : ()=>void
+    closeBasket: () => void
 }
 
-function BodyBasket( {closeBasket} : IBodyBasket) {
+function BodyBasket({ closeBasket }: IBodyBasket) {
     const storeBasket = useStoreBasket()
     const totalPrice = storeBasket.getTotalPrice()
     const articles = storeBasket.basket
+    const [isBtnDisable, setIsBtnDisable] = useState<boolean>()
 
     function handleDelete(idArticle: string) {
 
@@ -56,13 +57,21 @@ function BodyBasket( {closeBasket} : IBodyBasket) {
 
     }
 
-    function decrementQuantity (idArticle : string) {
-        storeBasket.changeQuantity(idArticle , -1)
+    function decrementQuantity(idArticle: string) {
+        storeBasket.changeQuantity(idArticle, -1)
     }
 
-    function incrementQuantity(idArticle : string) {
-        storeBasket.changeQuantity(idArticle , 1)
+    function incrementQuantity(idArticle: string) {
+        storeBasket.changeQuantity(idArticle, 1)
     }
+
+    useEffect(() => {
+        if (articles.length > 0) {
+            setIsBtnDisable(false)
+        } else {
+            setIsBtnDisable(true)
+        }
+    }, [articles.length])
 
     return (
 
@@ -70,7 +79,7 @@ function BodyBasket( {closeBasket} : IBodyBasket) {
 
             <h2>Basket</h2>
 
-            <button onClick={closeBasket} className={styles.btn_close}><Image src={closeIcon} alt=''/></button>
+            <button onClick={closeBasket} className={styles.btn_close}><Image src={closeIcon} alt='' /></button>
 
             <ul className={styles.wrapper_articles}>
 
@@ -86,16 +95,16 @@ function BodyBasket( {closeBasket} : IBodyBasket) {
                                 {element.category === 'bass' ? <Image src={imageBass} alt='' className={styles.image} /> : ''}
                                 {element.category === 'classic' ? <Image src={imageClassic} alt='' className={styles.image} /> : ''}
                                 {element.category === 'electric' ? <Image src={imageElectric} alt='' className={styles.image} /> : ''}
-                                {element.category === 'electroAcoustic' ? <Image src={imageElectroAcoustic} alt='' className={styles.image} /> : ''}
+                                {element.category === 'electro-acoustic' ? <Image src={imageElectroAcoustic} alt='' className={styles.image} /> : ''}
 
 
                                 <div className={styles.descri_center}>
                                     <p><span className={styles.title}>name</span> : {element.name}</p>
                                     <div className={styles.wrapper_quantity}>
                                         <span className={styles.title}>quantity</span> :
-                                        <button onClick={()=>{decrementQuantity(element.id)}}>-</button>
+                                        <button onClick={() => { decrementQuantity(element.id) }}>-</button>
                                         {element.quantity}
-                                        <button onClick={()=>{incrementQuantity(element.id)}}>+</button>
+                                        <button onClick={() => { incrementQuantity(element.id) }}>+</button>
                                     </div>
                                     <p><span className={styles.title}>reference</span> : {element.id}</p>
                                 </div>
@@ -123,7 +132,7 @@ function BodyBasket( {closeBasket} : IBodyBasket) {
 
             <p className={styles.total}>total : <span> {totalPrice} $ </span></p>
 
-            <Button className='primary' value='buy' />
+            <Button className='primary' value='buy' isDisable={isBtnDisable} />
         </div>
     )
 }

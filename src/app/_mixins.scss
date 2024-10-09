@@ -2,7 +2,8 @@ $white : #fff;
 $white-80 : rgba(255, 255, 255, 0.8);
 $red : #E11D07;
 $red-secondary : #ff0000;
-$red-90 : rgba(255, 0, 0, 0.90);
+$red-90 : rgba(255, 0, 0, 0.9);
+$red-10 : rgba(255, 0, 0, 0.1);
 $red-83 : rgba(225, 29, 7, 0.83);
 $red-50 : rgba(225, 29, 7, 0.5);
 $black-40 : rgba(0, 0, 0, 0.45);
@@ -17,6 +18,7 @@ $black: #2C2C2C;
 $gray : #D9D9D9;
 $gray-35 : rgba(217, 217, 217, 0.25);
 $green : #56DF5C;
+$green-secondary : #33c63a;
 
 $breakpoints : ("desktop" : 1280px, "laptop": 1024px, "tab_landscape" : 992px, "tab_portrait" : 768px, "mobile":480px);
 

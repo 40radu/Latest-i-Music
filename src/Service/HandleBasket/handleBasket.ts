@@ -6,7 +6,7 @@ interface ISave {
     name: string;
     price: number;
     quantity: number;
-    category: 'bass' | 'acoustic' | 'electric' | 'electroAcoustic' | 'ukulele' | 'classic'
+    category: 'bass' | 'acoustic' | 'electric' | 'electro-acoustic' | 'ukulele' | 'classic'
 };
 
 export interface IAdd {
@@ -14,7 +14,7 @@ export interface IAdd {
     name: string;
     quantity?: number;
     price: number;
-    category: 'bass' | 'acoustic' | 'electric' | 'electroAcoustic' | 'ukulele' | 'classic';
+    category: 'bass' | 'acoustic' | 'electric' | 'electro-acoustic' | 'ukulele' | 'classic';
 };
 
 export interface IStoreBasket {

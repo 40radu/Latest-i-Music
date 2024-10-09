@@ -1,8 +1,7 @@
 import React from 'react'
 import styles from './_details.module.scss'
-import locationIc from '../../../Icons/location.svg'
-import phoneIc from '../../../Icons/call.svg'
-import Image from 'next/image';
+import IconLocation from '@/Component/Icons/IconLocation';
+import IconPhone from '@/Component/Icons/IconPhone';
 
 interface IDetails {
     src : "location" | "phone";
@@ -16,10 +15,10 @@ function DetailsCard({src , descriFirst ,descriSecond, title} : IDetails) {
   return (
     <div className={styles.details_card}>
         {
-            src === 'location' ? <Image src={locationIc} alt='icon location' className={styles.image}/> :""
+            src === 'location' ? <IconLocation width='32' height='29' fillColorPath='white'/>:""
         }
         {
-            src === 'phone' ? <Image src={phoneIc} alt='icon phone' className={styles.image}/> :""
+            src === 'phone' ? <IconPhone width='29' height='29' fillColorPath='white'/> :""
         }
         <div className={styles.text_zone}>
             <h6>{title}</h6>

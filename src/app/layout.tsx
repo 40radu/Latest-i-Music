@@ -3,10 +3,10 @@ import "./_globals.scss";
 import NavBar from "@/Component/Layout/NavBar/page";
 import Footer from "@/Component/Layout/Footer/Footer";
 
-export const metadata: Metadata = {
-  title: "I-Musical",
-  description: "Site qui vend des instruments de musique",
-};
+export const metaData : Metadata = {
+  title : 'I-Musical | Home',
+  description :"Vendre des instruments de musique"
+}
 
 export default function RootLayout({
   children,

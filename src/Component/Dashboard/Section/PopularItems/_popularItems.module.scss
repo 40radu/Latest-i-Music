@@ -32,7 +32,7 @@
         padding: 50px 100px;
 
         @include media_desktop {
-            padding: 50px;  
+            padding: 50px;
         }
 
         @include media_tab_portrait {
@@ -61,6 +61,12 @@
 
         .swiper-button-prev {
             left: 20px;
+            // background-image: url('/next.svg');
+            // background-repeat: no-repeat;
+
+            // &::after {
+            //     content: '';
+            // }
 
             @include media_desktop {
                 left: 20px;

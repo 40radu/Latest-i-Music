@@ -124,5 +124,9 @@
             @include flex (start, center, row);
             letter-spacing: 0.9px;
         }
+
+        .container_button_add {
+            padding-top: 12px;
+        }
     }
 }

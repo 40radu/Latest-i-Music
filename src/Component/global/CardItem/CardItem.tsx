@@ -1,13 +1,9 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import styles from './_cardItem.module.scss'
 import Image from 'next/image'
-import TitleCard from '../TitleCard/TitleCard'
 import { ICardItem } from './typeCardItem'
-import Price from '../Price/Price'
-import Button from '../Button/page'
-import { useStoreBasket } from '@/Service/HandleBasket/handleBasket'
 import { useRouter } from 'next/navigation'
 
 

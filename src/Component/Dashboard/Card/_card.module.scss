@@ -35,7 +35,7 @@
 
     &:hover {
         scale: 1.005;
-
+        transition: 0.15s ease-in-out;
         img {
             filter: blur(1px);
         }
@@ -50,5 +50,9 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+
+        @include media_tab_portrait {
+            display: flex;
+        }
     }
 }

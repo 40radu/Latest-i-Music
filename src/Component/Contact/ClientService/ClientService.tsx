@@ -2,7 +2,8 @@ import React from 'react'
 import styles from './_clientService.module.scss'
 import Image from 'next/image'
 import customerIc from '../../../Icons/customer_service.svg'
-import mailIc from '../../../Icons/email.svg'
+import IconEmail from '@/Component/Icons/IconEmail';
+import IconEarphone from '@/Component/Icons/IconEarphone';
 
 interface IClientService {
     title: 'customer service' | 'E-mail';
@@ -14,8 +15,8 @@ function ClientService({ title }: IClientService) {
         <section className={styles.customer_service}>
             <div className={styles.wrapper_title}>
                 <h4> {title} </h4>
-                {title === 'customer service' ? <Image src={customerIc} alt='' /> : ''}
-                {title === 'E-mail' ? <Image src={mailIc} alt='' /> : ''}
+                {title === 'customer service' ? <IconEarphone width='30' height='30' fillPathColor='#E11D07'/>: ''}
+                {title === 'E-mail' ? <IconEmail width='30' height='30' fillPathColor='#E11D07'/> :''}
             </div>
 
 

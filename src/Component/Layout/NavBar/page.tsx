@@ -11,13 +11,15 @@ import Navlink from '@/Component/global/NavLink/page'
 import Shopping from '@/Component/specifies/Shopping/page'
 import SearchZone from '@/Component/specifies/SearchZone/SearchZone'
 import Menu_bar from '@/Component/specifies/Menu_bar/Menu_bar'
-import { useStoreStateNavMobil } from '@/Service/HandleMenuBarBtnSearch/stateMenuSearch'
+import { useStoreStateNav } from '@/Service/HandleMenuBarBtnSearch/stateMenuSearch'
 import { usePathname } from 'next/navigation'
 
 function NavBar() {
 
-    const stateMaskBody = useStoreStateNavMobil()
-    const showMaskBody = stateMaskBody.menuBar
+    const stateMaskBody = useStoreStateNav()
+
+    const showMaskBodyMenuBar= stateMaskBody.menuBar
+    const showMaskBodyBasket= stateMaskBody.basket
 
     const pathname = usePathname()
 
@@ -33,7 +35,8 @@ function NavBar() {
 
     return (
         <section className={styles.container_nav}>
-            {showMaskBody && <div onClick={hideMenuBar} className={styles.mask_body_nav} id='mask_body_nav'></div>}
+            {showMaskBodyMenuBar && <div onClick={hideMenuBar} className={styles.mask_body_nav} id='mask_body_nav'></div>}
+            {showMaskBodyBasket && <div onClick={hideMenuBar} className={styles.mask_body_nav} id='mask_body_nav'></div>}
 
             <nav className={styles.navbar}>
                 <Link href='/'>
@@ -47,7 +50,7 @@ function NavBar() {
                     <Navlink href='/contact' value='contact' /> */}
 
                     <Link href='/'  className={`${pathname === '/' ? styles.active_link : styles.link}`}>home</Link>
-                    <Link href='/articles/all_items' className={`${pathname === '/articles' ? styles.active_link : styles.link}`}>articles</Link>
+                    <Link href='/articles/all_items' className={`${pathname.includes('/articles/') ? styles.active_link : styles.link}`}>articles</Link>
                     <Link href='/contact'  className={`${pathname === '/contact' ? styles.active_link : styles.link}`}>contact</Link>
                     <SearchZone />
                     <Shopping />

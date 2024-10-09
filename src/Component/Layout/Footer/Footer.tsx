@@ -9,17 +9,27 @@ import Copyright from '@/Component/Footer/Copyright/Copyright'
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <Location/>
+      <Location />
       <div className={styles.latest}>
-        <FollowZone/>
-        <FooterLink link1='electric guitar' title='Articles' link2='bass guitar' link4='electro-acoustique guitar' link3='ukulele'/>
-        <FooterLink link1='electric guitar' title='Articles' link2='bass guitar'/>
-        <FooterLink link1='Terms of Service' title='others' link2='Privacy Policy'/>
+        <FollowZone />
+        <FooterLink
+          link1='electric guitar' href1='/articles/electric'
+          title='Articles'
+          link2='bass guitar' href2='/articles/bass'
+          link4='electro-acoustique guitar' href4='/articles/electro-acoustic'
+          link3='ukulele' href3='/articles/ukulele' />
+        <FooterLink
+          link1='acoustic guitar' href1='/articles/acoustic'
+          title='Articles' link2='classic guitar' href2='/articles/classic' />
+        <FooterLink
+          link1='Terms of Service' href1=''
+          title='others'
+          link2='Privacy Policy' href2='' />
       </div>
 
-      <Copyright/>
+      <Copyright />
     </footer>
   )
-} 
+}
 
 export default Footer

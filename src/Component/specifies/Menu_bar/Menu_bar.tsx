@@ -5,15 +5,13 @@ import styles from './_menu_bar.module.scss'
 import Image from 'next/image'
 import menu_barIc from '../../../Icons/menu_bar.svg'
 import Link from 'next/link'
-import { useStoreStateNavMobil } from '@/Service/HandleMenuBarBtnSearch/stateMenuSearch'
+import { useStoreStateNav } from '@/Service/HandleMenuBarBtnSearch/stateMenuSearch'
 
 function Menu_bar() {
-    const stateShowMenu = useStoreStateNavMobil()
+    const stateShowMenu = useStoreStateNav()
     const showMenu = stateShowMenu.menuBar
 
     function handleClick() {
-        const body: HTMLBodyElement | null = document.querySelector('body');
-        const mask_body =  document.querySelector('#mask_body_nav') as HTMLDivElement
         
         if(showMenu === false) {
             stateShowMenu.seeMenuBar()

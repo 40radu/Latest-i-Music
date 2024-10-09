@@ -7,17 +7,21 @@ interface IFooterLink {
     link2: string;
     link3?: string;
     link4?: string;
+    href1: string;
+    href2: string;
+    href3?: string;
+    href4?: string;
 }
 
-function FooterLink({ title, link1, link2, link3, link4 }: IFooterLink) {
+function FooterLink({ title, link1, href1 , link2, href2 ,link3, href3, link4 , href4 }: IFooterLink) {
     return (
-        <div className={styles.footerLink}>
+        <div className={styles.footerLink} >
             <h5>{title}</h5>
             <ul className={styles.containerLinks}>
-                <a href="#">   <li className={styles.link}> {link1}</li></a>
-                <a href="#"> <li className={styles.link}> {link2}</li></a>
-                <a href="#"> <li className={styles.link}> {link3}</li></a>
-                <a href="#">  <li className={styles.link}> {link4}</li></a>
+                <a href={href1}>   <li className={styles.link}> {link1}</li></a>
+                <a href={href2}> <li className={styles.link}> {link2}</li></a>
+                <a href={href3}> <li className={styles.link}> {link3}</li></a>
+                <a href={href4}>  <li className={styles.link}> {link4}</li></a>
             </ul>
         </div>
     )
