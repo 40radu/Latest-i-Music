@@ -39,21 +39,24 @@ function BodyBasket({ closeBasket }: IBodyBasket) {
 
         const allPrompt = document.querySelectorAll(`.${styles.prompt_delete}`)
 
-        const currentPrompt = document.getElementById(idArticle) as HTMLDivElement
+        allPrompt.forEach((element) => {
+            const promptElement = element as HTMLDivElement
+            if (element.id == idArticle) {
+                promptElement.style.display = 'flex'
+            } else {
+                promptElement.style.display = 'none'
+            }
+        })
+    }
 
+    function hidePromptRemove() {
+
+        const allPrompt = document.querySelectorAll(`.${styles.prompt_delete}`)
         allPrompt.forEach((element) => {
             const promptElement = element as HTMLDivElement
             promptElement.style.display = 'none'
+
         })
-
-        currentPrompt.style.display = 'flex'
-
-    }
-
-    function hidePromptRemove(idArticle: string) {
-
-        const prompt = document.getElementById(idArticle) as HTMLDivElement
-        prompt.style.display = 'none'
 
     }
 
@@ -117,7 +120,7 @@ function BodyBasket({ closeBasket }: IBodyBasket) {
 
                                     <div className={styles.wrapper_buttons}>
                                         <button onClick={() => { handleDelete(element.id) }} className={styles.btn_confirm}>Confirm</button>
-                                        <button onClick={() => { hidePromptRemove(element.id) }}>Cancel</button>
+                                        <button onClick={hidePromptRemove}>Cancel</button>
                                     </div>
                                 </div>
 

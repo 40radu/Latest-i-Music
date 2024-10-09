@@ -1,10 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import shoppingIC from '../../../Icons/shopping.svg'
 import styles from './_shopping.module.scss'
-import Button from '@/Component/global/Button/page'
 import BodyBasket from './BodyBasket/BodyBasket'
 import { useStoreBasket } from '@/Service/HandleBasket/handleBasket'
 import { useStoreStateNav } from '@/Service/HandleMenuBarBtnSearch/stateMenuSearch'
