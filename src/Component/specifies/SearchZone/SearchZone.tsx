@@ -50,7 +50,9 @@ function SearchZone() {
                 <div className={styles.wrapper_search}>
 
                     <div className={styles.label_input_search}>
-                        <Image src={searchLogo} alt='search' className={styles.image} />
+                        <label htmlFor="search_input">
+                            <Image src={searchLogo} alt='search' className={styles.image} />
+                        </label>
                         <input type="search" id='search_input' placeholder='ex: electrique, classique ...' value={valueInput} onChange={handleChange} />
                     </div>
 

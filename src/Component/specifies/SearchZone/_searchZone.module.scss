@@ -19,11 +19,10 @@
             background-color: $white;
             width: 350px;
             height: fit-content;
-            padding: 12px;
-            padding-bottom: 0;
+            padding-top: 12px;
             border-radius: 18px;
             z-index: 20;
-            row-gap: 12px;
+            // row-gap: 12px;
 
 
             @include media_tab_portrait {
@@ -32,9 +31,7 @@
 
             @include media_mobile {
                 width: 300px;
-                padding: 8px 10px;
-                padding-bottom: 0;
-                row-gap: 6px;
+                padding-top: 8px;
             }
 
             .label_input_search {
@@ -42,7 +39,12 @@
                 height: 100%;
                 @include flex (start, center, row);
                 column-gap: 10px;
-                // padding-bottom: 5px;
+                padding: 0 12px 12px;
+                box-shadow:  0 4px 4px rgb(0 0 0 / 5%);
+
+                @include media_mobile {
+                    padding-bottom: 8px;
+                }
 
                 input {
                     width: 100%;
@@ -75,24 +77,18 @@
             .wrapper_link {
                 width: 100%;
                 @include flex (center, start, column);
-                border-top: 1px solid $black-25;
                 max-height: 410px;
                 overflow-y: scroll;
                 
                 a {
-                    padding: 4px 0 4px 0;
+                    padding: 4px 10px;
                     width: 100%;
-
-                    // @include media_mobile {
-                    //     padding: 5px 0 5px 3px;
-                    // }
-
-
 
                     p {
                         width: 100%;
                         padding: 8px;
                         font-size: 14px;
+                        border-radius: 2px;
 
                         &:hover {
                             background-color: $black-15;

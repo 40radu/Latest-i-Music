@@ -12,8 +12,12 @@
         width: 100%;
     }
 
+    label {
+        cursor: pointer;
+    }
+
     .input {
-        width: auto;
+        width: 100%;
         height: 100%;
         outline: none;
         color: $black-75;
