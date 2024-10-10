@@ -108,6 +108,17 @@
 
                 &:hover {
                     opacity: 1;
+                    transition: 0.25s ease-in-out;
+                }
+
+                @media (hover : none) and (pointer : coarse) {
+                    &:active {
+                        opacity: 1;
+                    }
+
+                    &:not(:active) {
+                        opacity: 0.5;
+                    }
                 }
             }
 

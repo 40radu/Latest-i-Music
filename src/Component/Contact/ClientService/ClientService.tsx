@@ -15,19 +15,19 @@ function ClientService({ title }: IClientService) {
         <section className={styles.customer_service}>
             <div className={styles.wrapper_title}>
                 <h4> {title} </h4>
-                {title === 'customer service' ? <IconEarphone width='30' height='30' fillPathColor='#E11D07'/>: ''}
-                {title === 'E-mail' ? <IconEmail width='30' height='30' fillPathColor='#E11D07'/> :''}
+                {title === 'customer service' ? <IconEarphone width='30' height='30' fillPathColor='#E11D07' /> : ''}
+                {title === 'E-mail' ? <IconEmail width='30' height='30' fillPathColor='#E11D07' /> : ''}
             </div>
 
 
             {title === 'customer service' ?
-                <p className={styles.descri}>Le service client est disponible <span>7/7jrs</span> à partir de <span>9-17h</span>.
-                    Numéro : +26718419411818118</p>
+                <p className={styles.descri}>Customer service is available <span>7/7 </span>from<span> 9-17h</span>.
+                    Phone number : +267184818118</p>
                 : ''}
 
             {title === 'E-mail' ?
-                <p className={styles.descri}>Vous aurez une réponse entre <span>1 à 2 jours ouvrables </span>
-                sur votre boîte email : imusical@gmail.com</p>
+                <p className={styles.descri}>You will receive a reply within <span>24 hours </span>
+                    by e-mail from: imusical@gmail.com</p>
                 : ''}
 
         </section>

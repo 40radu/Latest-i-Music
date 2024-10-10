@@ -76,7 +76,7 @@
 
             .wrapper_link {
                 width: 100%;
-                @include flex (center, start, column);
+                @include flex (start, start, column);
                 max-height: 410px;
                 overflow-y: scroll;
                 

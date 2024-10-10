@@ -24,14 +24,41 @@
             border-color: $black-25;
             background-color: transparent;
         }
+
+        @media (hover: none) and (pointer: coarse) {
+            &:active {
+                color: $black-50;
+                border-color: $black-25;
+                background-color: transparent;
+            }
+
+            &:not(:active) {
+                color: $black-50;
+                border-color: $black-25;
+                background-color: transparent;
+            }
+        }
     }
 
     &:hover {
+        color: $white;
         background-color: $red-90;
         border-color: $red-90;
-        color: $white;
         transition: 0.25s ease-in-out;
         background-image: none;
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+        &:active {
+            color: $white;
+            background-color: $red-90;
+            border-color: $red-90;
+        }
+
+        &:not(:active) {
+            background-color: $red;
+            border: 1px $red solid;
+        }
     }
 
     @include media_laptop {
@@ -52,15 +79,37 @@
         background-color: $black-10;
         background-color: transparent;
     }
+
+    @media (hover: none) and (pointer: coarse) {
+        &:active {
+            border-color: $white;
+            background-color: $black-10;
+            background-color: transparent;
+        }
+
+        &:not(:active) {
+            border-color: $white;
+            background-color: $black-10;
+            background-color: transparent;
+        }
+    }
 }
 
 .third {
     @extend .primary;
     border: none;
-    background-color: rgba(124, 255, 0, 0.05);
     background-color: transparent;
     background-image: linear-gradient(to right, $white, $red-10 , $red-10 );
     color: $red-90;
+
+    @media (hover: none) and (pointer: coarse) {
+        &:not(:active) {
+            border: none;
+            background-color: transparent;
+            background-image: linear-gradient(to right, $white, $red-10 , $red-10 );
+            color: $red-90;
+        }
+    }
 }
 
 .fourthly {
@@ -68,4 +117,18 @@
     color: $black-50;
     border-color: $black-25;
     background-color: transparent;
+
+    @media (hover: none) and (pointer: coarse) {
+        &:active {
+            border-color: $white;
+            background-color: $black-10;
+            background-color: transparent;
+        }
+
+        &:not(:active) {
+            border-color: $black-25;
+            color: $black-50;
+            background-color: transparent;
+        }
+    }
 }
