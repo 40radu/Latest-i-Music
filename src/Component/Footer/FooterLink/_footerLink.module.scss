@@ -34,6 +34,17 @@
             &:hover {
                 color: $black;
             }
+
+            @media (hover : none) and (pointer : coarse) {
+                &:active {
+                    color: $black;
+                }
+
+                &:not(:active) {
+                    color: $black-50;
+                    transition: 0.25s ease;
+                }
+            }
         }
     }
 }

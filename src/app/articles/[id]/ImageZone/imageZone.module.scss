@@ -69,10 +69,6 @@
         }
     }
 
-    // .wrapper_mainImg.active::after {
-    //     display: block;
-    // }
-
     .wrapper_othersImg {
         width: fit-content;
         height: 400px;
@@ -121,8 +117,8 @@
 
 
             @include media_mobile {
-                width: 90px;
-                height: 90px;
+                width: 70px;
+                height: 70px;
             }
         }
 

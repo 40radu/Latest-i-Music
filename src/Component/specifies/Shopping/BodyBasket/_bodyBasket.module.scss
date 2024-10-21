@@ -2,21 +2,24 @@
 
 .basket_body {
     @include flex (start, center, column);
-    // row-gap: 10px;
+    z-index: 20;
     overflow: hidden;
     position: fixed;
     background-color: $white;
-    right: 15px;
-    width: 340px;
-    height: 500px;
-    top: 138px;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 350px;
+    min-height: 500px;
+    max-height: 90vh;
+    top: 50%;
     padding: 10px;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.25);
 
     @include media_mobile {
-        top: 115px;
+        right: 0;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
     }
 
     h2 {
@@ -51,6 +54,7 @@
         overflow-y: scroll;
         @include flex (start, start, column);
         row-gap: 10px;
+        position: relative;
 
         .article {
             width: 100%;
@@ -95,8 +99,6 @@
 
             .price {
                 text-wrap: nowrap;
-                // font-weight: 600;
-                // font-style: italic;
             }
 
             .btn_remove {
@@ -122,10 +124,6 @@
                 }
             }
 
-            // .btn_edit {
-            //     @extend .btn_remove;
-            //     right: 28px;
-            // }
             .prompt_delete {
                 width: 100%;
                 height: 100%;
@@ -137,10 +135,6 @@
                 background-color: #fffffff2;
                 row-gap: 10px;
                 display: none;
-
-                // @include media_tab_portrait {
-                //     display: none;
-                // }
 
                 .question {
                     font-weight: 500;
@@ -176,17 +170,75 @@
         .text_empty {
             position: absolute;
             left: 50%;
-            top: 40%;
-            transform: translate(-50%);
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 
     .total {
         min-width: 100%;
+        height: fit-content;
         padding: 10px;
         border-top: 1px solid $gray;
         text-transform: capitalize;
         @apply flex justify-between;
 
+    }
+
+    .paymentMethod {
+        width: 100%;
+        height: 0;
+        opacity: 0;
+        @include flex (center, center, column);
+        row-gap: 4px;
+        pointer-events: none;
+
+
+        .list {
+            width: 100%;
+            height: fit-content;
+            @include flex (space-between, start, row);
+            padding: 8px 0;
+
+        }
+
+        .inputNumber {
+            width: 100%;
+            @include flex (center, center, row);
+            height: 40px;
+            border: 1px solid $black-10;
+            padding: 0 10px;
+            letter-spacing: 0.9px;
+
+        }
+
+        .containerBtn {
+            @apply flex justify-between items-center w-full;
+            flex-direction: row;
+            padding: 8px 25px;
+            height: fit-content;
+
+            button {
+                padding: 10px 25px;
+                border-radius: 2px;
+                border: none;
+                color: $white;
+                background-color: #9aeb1d;
+                text-transform: capitalize;
+                width: 117px;
+            }
+
+            .btn_validate {
+                background-color: $red-83;
+            }
+
+            .btn_confirm {
+                background-color: $red-83;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
     }
 }

@@ -3,9 +3,12 @@
 .container_article {
     @apply  grid grid-cols-5 justify-items-center p-12 gap-7 relative;
     min-height: 90vh;
+    padding: 50px 100px;
+
 
     @media (max-width : 1440px){
         @apply grid-cols-4;
+        padding: 50px;
     }
 
     @include media_laptop {

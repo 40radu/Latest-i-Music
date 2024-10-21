@@ -42,6 +42,7 @@
         height: 240px;
         background-color: $gray-35;
         border-radius: 2px;
+        position: relative;
 
         img {
             width: 100%;
@@ -52,6 +53,49 @@
         @include media_mobile {
             width: 173px;
             height: 173px;
+        }
+
+        .addBtn {
+            @apply flex justify-center items-center absolute;
+            padding: 8px;
+            bottom: 10px;
+            right: 10px;
+            background-color: $white;
+            border-radius: 50%;
+
+            path {
+                stroke: $gray-35;
+            }
+
+            &:hover {
+                background-color: $red-83;
+
+                path {
+                    transition: 0.25s ease;
+                    stroke: $white ;
+                    stroke-width: 0.5px;
+                }
+            }
+
+            @media (hover : none) and (pointer : coarse) {
+                &:active {
+                    background-color: $red-83;
+
+                    path {
+                        transition: 0.25s ease;
+                        stroke-width: 0.5px;
+                        stroke: $white ;
+                    }
+                }
+
+                &:not(:active) {
+                    background-color: $white;
+
+                    path {
+                        stroke: $gray-35;
+                    }
+                }
+            }
         }
     }
 
@@ -111,4 +155,5 @@
         }
 
     }
+
 }

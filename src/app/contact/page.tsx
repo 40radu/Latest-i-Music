@@ -13,12 +13,6 @@ import Image from 'next/image'
 import ResponseForm from '@/Component/specifies/ResponseForm/ResponseForm'
 import gsap from 'gsap'
 
-
-// export const metadata: Metadata = {
-//   title: "I-Musical | Contact",
-//   description: "Vendre des instruments de musique",
-// };
-
 interface IFormData {
   name: string;
   email: string;
@@ -27,7 +21,7 @@ interface IFormData {
 
 function Contact() {
 
-  const [statusResponse, setStatusResponse] = useState<boolean>(true)
+  const [seeResponse, setSeeResponse] = useState<boolean>(false)
 
   const [formData, setFormData] = useState<IFormData>({
     name: '',
@@ -51,32 +45,26 @@ function Contact() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const responseForm = document.getElementById('responseForm') as HTMLDivElement
-
     setTimeout(() => {
-      setStatusResponse(true)
-      setFormData((prevState) => ({
+      setFormData(() => ({
         name: '',
         email: '',
         message: '',
       }))
 
-      gsap.to(responseForm, {
-        opacity: 1,
-        duration: 0.5
-      })
+    }, 250)
 
-      
-    }, 1000)
+    setTimeout(()=>{
+      setSeeResponse(true)
+    },1000)
 
-    gsap.to(responseForm, {
-      opacity: 0,
-      duration: 0.5,
-      delay: 5
-    })
-
-    
   }
+
+  function hideResponse() {
+    setSeeResponse(false)
+  }
+
+
   return (
     <div className={styles.contact_container}>
 
@@ -98,7 +86,7 @@ function Contact() {
 
       </div>
 
-      <ResponseForm />
+      {seeResponse && <ResponseForm hideResponse={hideResponse} status = {seeResponse}/>}
 
     </div>
   )

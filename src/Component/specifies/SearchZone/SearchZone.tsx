@@ -12,7 +12,7 @@ function SearchZone() {
 
     const stateShowSearch = useStoreStateNav()
 
-    const showSearch = stateShowSearch.search
+    const [showSearch, setShowSearch] = useState<boolean>(false)
 
     const [allData, setAllData] = useState<IAdd[]>()
     const [valueInput, setValueInput] = useState('')
@@ -21,12 +21,22 @@ function SearchZone() {
         setValueInput(e.target.value)
     }
 
-    function handleClick() {
-        stateShowSearch.seeSearch()
+    function viewSearch() {
+        setShowSearch(true)
+        stateShowSearch.hide()
+        const body = document.querySelector('body') as HTMLBodyElement
+        if (body){
+            body.style.overflow = 'hidden'
+        }
     }
 
-    function hideSearch() {
+    function hideSearch () {
+        setShowSearch(false)
         stateShowSearch.hide()
+        const body = document.querySelector('body') as HTMLBodyElement
+        if (body){
+            body.style.overflow = 'auto'
+        }
     }
 
     useEffect(() => {
@@ -41,8 +51,8 @@ function SearchZone() {
 
     return (
         <div className={styles.containerImg}>
-            <label htmlFor="search_input">
-                <Image src={searchLogo} alt='search' className={styles.image} onClick={handleClick} />
+            <label htmlFor="search_input" className={styles.labelSearch}>
+                <Image src={searchLogo} alt='search' className={styles.image} onClick={viewSearch} />
             </label>
             {
                 showSearch &&
@@ -50,9 +60,9 @@ function SearchZone() {
                 <div className={styles.wrapper_search}>
 
                     <div className={styles.label_input_search}>
-                        <label htmlFor="search_input">
+                        <div >
                             <Image src={searchLogo} alt='search' className={styles.image} />
-                        </label>
+                        </div>
                         <input type="search" id='search_input' placeholder='ex: electrique, classique ...' value={valueInput} onChange={handleChange} />
                     </div>
 

@@ -2,9 +2,13 @@
 
 .wrapperWhy {
     width: 100%;
-    padding: 50px 150px;
+    padding: 50px 90px;
     @include flex (center, start, column);
     row-gap: 50px;
+
+    @media(min-width : 1441px) {
+        padding: 50px 150px;
+    }
 
     @include media_desktop {
         padding: 50px 85px;

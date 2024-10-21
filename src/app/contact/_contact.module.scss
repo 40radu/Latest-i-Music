@@ -7,8 +7,12 @@
 
     .wrapper_services {
         width: 100%;
-        padding: 50px 150px;
+        padding: 50px 90px;
         @include flex (space-between, start, row);
+
+        @media (min-width : 1441px) {
+            padding: 50px 150px;
+        }
 
         @include media_desktop {
             padding: 50px 85px
@@ -26,7 +30,7 @@
 
         }
 
-        
+
 
         @include media_tab_portrait {
             padding: 50px 25px;
@@ -42,6 +46,7 @@
             height: fit-content;
             @include flex (start, start, column);
             row-gap: 68px;
+            padding-top: 8.5px;
         }
 
         .wrapper_form {

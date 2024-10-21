@@ -10,6 +10,11 @@
     border-radius: 2px;
     position: relative;
 
+    &:hover {
+        scale: 1.015;
+        transition: ease 0.25s;
+    }
+
     @include media_laptop {
         box-shadow: 0 6px 50px $black-25;
         width: 288px;
@@ -33,26 +38,4 @@
         }
     }
 
-    &:hover {
-        scale: 1.005;
-        transition: 0.15s ease-in-out;
-        img {
-            filter: blur(1px);
-        }
-
-        button {
-            display: flex;
-        }
-    }
-
-    button {
-        display: none;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-
-        @include media_tab_portrait {
-            display: flex;
-        }
-    }
 }

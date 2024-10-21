@@ -10,7 +10,11 @@
     padding-bottom: 20px;
 
     .title {
-        padding-left: 150px;
+        padding-left: 90px;
+
+        @media (min-width : 1441px) {
+            padding-left: 150px;
+        }
 
         @include media_desktop {
             padding-left: 80px;
@@ -29,7 +33,11 @@
 
     .swiper {
         width: 100%;
-        padding: 50px 100px;
+        padding: 50px;
+
+        @media (min-width : 1441px) {
+            padding: 50px 100px;
+        }
 
         @include media_desktop {
             padding: 50px;
@@ -60,49 +68,39 @@
         }
 
         .swiper-button-prev {
-            left: 20px;
-            // background-image: url('/next.svg');
-            // background-repeat: no-repeat;
+            left: 25px;
+            background-image: url('/arrowLeft.svg');
+            background-repeat: no-repeat;
+            background-size: 65%;
 
-            // &::after {
-            //     content: '';
-            // }
+            &::after {
+                content: '';
+            }
 
             @include media_desktop {
-                left: 20px;
+                left: 15px;
+                background-size: 50%;
             }
         }
 
         .swiper-button-next {
-            right: 20px;
+            right: 25px;
+            background-image: url('/arrowRight.svg');
+            background-repeat: no-repeat;
+            background-size: 65%;
+
+            &::after {
+                content: '';
+            }
+
+
+            background-repeat: no-repeat;
 
             @include media_desktop {
-                right: 20px;
+                right: 15px;
+                background-size: 50%;
             }
         }
 
-
-
     }
-
-    // .swiper-wrapper {
-    //     width: 100%;
-    //     // margin-left: 150px;
-    //     background-color: transparent;  
-    //     @include flex(start, start, row);
-    //     column-gap: 150px;
-
-    //     .swiper-button-prev {
-    //         color: red;
-    //     }
-
-    //     .wrapperItems {
-    //         width: fit-content;
-    //         padding: 50px 0;
-    //     }
-    // }
-
-
-
-
 }

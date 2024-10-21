@@ -25,7 +25,8 @@ export interface IStoreBasket {
     remove: (idArticle: string) => void;
     getNumberProduct: () => number;
     changeQuantity: (idArticle: string, newQuantity: number) => void;
-    getTotalPrice: () => number
+    getTotalPrice: () => number;
+    reset : ()=> void
 
 }
 
@@ -98,7 +99,11 @@ export const useStoreBasket = create<IStoreBasket>()(
                 total = total + (basket[i].quantity * basket[i].price)
             }
             return total
-        }
+        }, 
+
+        reset() {
+            get().save([])
+        },
 
     })
 )

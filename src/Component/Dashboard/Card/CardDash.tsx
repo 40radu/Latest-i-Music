@@ -22,8 +22,6 @@ function CardDash({ descri , type , title} : ICardDash) {
             <p className={styles.descri}>
                 {descri}
             </p>
-
-            <Button className='secondary' value='Discover'/>
         </div>
     )
 }

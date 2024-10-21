@@ -1,0 +1,34 @@
+@import '../../../../app/mixins';
+
+.status {
+    position: fixed;
+    background-color: $green-secondary;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.20);
+    @include flex (center, center, row);
+    column-gap: 12px;
+    padding: 10px 26px;
+    width: fit-content;
+    top: 5%;
+    transform: translateX(-50%);
+    left: 55%;
+    opacity: 0;
+    z-index: 20;
+
+    p {
+        width: 100%;
+        color: $white;
+        width: 250px;
+        text-align: center;
+    }
+
+    img {
+        cursor: pointer;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: $black-15;
+        transition: 0.25s ease-in-out;
+        }
+    }
+
+}

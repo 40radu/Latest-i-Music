@@ -5,7 +5,7 @@ import styles from './_button.module.scss'
 import { IButton } from './TypeButton'
 import { useStoreBasket } from '@/Service/HandleBasket/handleBasket'
 
-function Button({ className, value, data , type = 'button' , isDisable = false}: IButton) {
+function Button({ className, value, data , type = 'button' , isDisable = false }: IButton) {
     const store = useStoreBasket()
 
     function handleClick() {

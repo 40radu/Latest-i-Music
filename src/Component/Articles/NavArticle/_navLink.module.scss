@@ -12,28 +12,27 @@
         padding-top: 37px;
     }
 
-    ;
-
-    @include media_mobile {
-        padding-top: 74px;
-    }
-
     .wrapperLinks {
         position: fixed;
         z-index: 15;
         top: 94px;
         width: 100%;
         height: fit-content;
-        padding: 0 150px;
+        padding: 0 90px;
         @include flex (start, center, row);
-        column-gap: 88px;
+        column-gap: 65px;
         background-image: url('/Image/Article/nav.png') !important;
         background-size: cover;
         background-repeat: no-repeat;
 
+        @media (min-width : 1441px) {
+            padding: 0 150px;
+            column-gap: 88px;
+        }
+
         @include media_desktop {
             padding: 0 85px;
-            column-gap: 60px;
+            column-gap: 40px;
 
         }
 

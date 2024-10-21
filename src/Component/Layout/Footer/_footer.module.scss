@@ -7,9 +7,13 @@
         width: 100%;
         height: fit-content;
         background-color: $gray-35;
-        padding: 55px 150px;
+        padding: 55px 90px;
         flex-wrap: wrap;
         @include flex(space-between, start, row);
+
+        @media (min-width : 1441px) {
+            padding: 55px 150px;
+        }
 
         @include media_desktop {
             padding: 55px 85px;
@@ -23,6 +27,6 @@
 
         @include media_mobile {
             padding: 55px 20px;
-    }
+        }
     }
 }

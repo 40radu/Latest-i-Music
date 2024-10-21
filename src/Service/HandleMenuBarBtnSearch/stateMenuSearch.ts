@@ -2,42 +2,34 @@ import { create } from "zustand";
 
 interface IStateNavMobil {
     search: boolean;
-    menuBar : boolean;
-    basket : boolean;
-    seeSearch : ()=> void;
-    seeMenuBar : ()=> void;
-    seeBasket : ()=> void;
-    hide : () => void;
+    menuBar: boolean;
+    basket: boolean;
+    seeSearch: () => void;
+    seeMenuBar: () => void;
+    seeBasket: () => void;
+    hide: () => void;
 }
 
 export const useStoreStateNav = create<IStateNavMobil>()(
-    (set, get) => ({
+    (set) => ({
         search: false,
-        menuBar : false,
-        basket : false,
+        menuBar: false,
+        basket: false,
 
-        seeSearch : ()=>{
-            set ({ search : true})
-            set ({menuBar : false})
-            set ({basket : false})
+        seeSearch: () => {
+            set({ search: true, menuBar: false, basket: false });
         },
 
-        seeMenuBar : ()=>{
-            set ({menuBar : true})
-            set ({ search : false})
-            set ({ basket : false})
+        seeMenuBar: () => {
+            set({ search: false, menuBar: true, basket: false });
         },
 
-        seeBasket : ()=>{
-            set ({ basket : true})
-            set ({menuBar : false})
-            set ({ search : false})
+        seeBasket: () => {
+            set({ search: false, menuBar: false, basket: true });
         },
 
-        hide : ()=>{
-            set ({ search : false})
-            set ({menuBar : false})
-            set ({basket : false})
+        hide: () => {
+            set({ search: false, menuBar: false, basket: false });
         },
 
     })

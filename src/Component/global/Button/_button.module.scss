@@ -13,6 +13,7 @@
     text-transform: capitalize;
     text-wrap: nowrap;
     @include flex(center, center, row);
+    outline-color: #a699d3;
 
     &:disabled {
         color: $black-50;
@@ -20,44 +21,26 @@
         background-color: transparent;
 
         &:hover {
-            color: $black-50;
-            border-color: $black-25;
-            background-color: transparent;
-        }
-
-        @media (hover: none) and (pointer: coarse) {
-            &:active {
-                color: $black-50;
-                border-color: $black-25;
-                background-color: transparent;
-            }
-
-            &:not(:active) {
-                color: $black-50;
-                border-color: $black-25;
-                background-color: transparent;
-            }
+           scale: 1;
         }
     }
 
     &:hover {
-        color: $white;
-        background-color: $red-90;
-        border-color: $red-90;
-        transition: 0.25s ease-in-out;
-        background-image: none;
+       scale: 0.95;
+       transition: 0.25s ease;
+    }
+
+    &:active {
+        scale: 1;
     }
 
     @media (hover: none) and (pointer: coarse) {
         &:active {
-            color: $white;
-            background-color: $red-90;
-            border-color: $red-90;
+            scale: 0.95;
         }
 
         &:not(:active) {
-            background-color: $red;
-            border: 1px $red solid;
+            scale: 1;
         }
     }
 
@@ -69,30 +52,8 @@
 
 .secondary {
     @extend .primary;
-    color: $white;
     border-color: $white;
-    background-color: $black-10;
     background-color: transparent;
-
-    &:hover {
-        border-color: $white;
-        background-color: $black-10;
-        background-color: transparent;
-    }
-
-    @media (hover: none) and (pointer: coarse) {
-        &:active {
-            border-color: $white;
-            background-color: $black-10;
-            background-color: transparent;
-        }
-
-        &:not(:active) {
-            border-color: $white;
-            background-color: $black-10;
-            background-color: transparent;
-        }
-    }
 }
 
 .third {
@@ -102,14 +63,6 @@
     background-image: linear-gradient(to right, $white, $red-10 , $red-10 );
     color: $red-90;
 
-    @media (hover: none) and (pointer: coarse) {
-        &:not(:active) {
-            border: none;
-            background-color: transparent;
-            background-image: linear-gradient(to right, $white, $red-10 , $red-10 );
-            color: $red-90;
-        }
-    }
 }
 
 .fourthly {
@@ -117,18 +70,4 @@
     color: $black-50;
     border-color: $black-25;
     background-color: transparent;
-
-    @media (hover: none) and (pointer: coarse) {
-        &:active {
-            border-color: $white;
-            background-color: $black-10;
-            background-color: transparent;
-        }
-
-        &:not(:active) {
-            border-color: $black-25;
-            color: $black-50;
-            background-color: transparent;
-        }
-    }
 }

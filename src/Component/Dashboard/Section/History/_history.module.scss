@@ -3,9 +3,13 @@
 .history {
     width: 100%;
     height: fit-content;
-    padding: 100px 150px 80px;
+    padding: 100px 90px 80px;
     @include flex(center, start, column);
     row-gap: 10px;
+
+    @media (min-width : 1441px) {
+        padding: 100px 150px 80px;
+    }
 
     @include media_desktop {
         padding: 100px 85px 80px;
@@ -60,10 +64,14 @@
 
             .descri {
                 width: 100%;
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: 400;
                 color: $black-40;
-                letter-spacing: text-space(14, 10);
+                letter-spacing: 0.9px;
+
+                @include media_laptop {
+                    font-size: 14px;
+                }
             }
         }
 

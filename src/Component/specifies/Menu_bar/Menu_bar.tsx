@@ -12,7 +12,10 @@ function Menu_bar() {
     const showMenu = stateShowMenu.menuBar
 
     function handleClick() {
-        
+        const body = document.querySelector('body') as HTMLBodyElement
+        if (body && body.style.overflow == 'hidden') {
+            body.style.overflow = 'auto'
+        }
         if(showMenu === false) {
             stateShowMenu.seeMenuBar()
         } else {

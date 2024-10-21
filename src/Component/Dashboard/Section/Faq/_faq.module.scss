@@ -1,13 +1,19 @@
 @import '../../../../app/mixins';
 
-.faqSection{
-    padding: 50px 150px 80px;
-    @include flex (start , center, column);
-    row-gap: 20px;
+.faqSection {
+    padding: 50px 90px 80px;
+    @include flex (start, center, column);
+    row-gap: 25px;
 
-    @include media_desktop{
+    @media (min-width : 1441px) {
+        padding: 50px 150px 80px;
+    }
+
+    @include media_desktop {
         padding: 50px 85px 80px;
-    };
+    }
+
+    ;
 
     @include media_laptop {
         padding: 50px 45px 80px;

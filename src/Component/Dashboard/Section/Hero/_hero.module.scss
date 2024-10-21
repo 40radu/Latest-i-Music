@@ -6,9 +6,13 @@
     background-image: url('/Image/Dashboard/hero.png') !important;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0 150px;
+    padding: 0 90px;
     @include flex(center, start, column);
     row-gap: 25px;
+
+    @media (min-width : 1441px){
+    padding: 0 150px;
+    }
 
     @include media_desktop {
         padding: 0 85px;
@@ -25,7 +29,8 @@
     }
 
     @include media_mobile {
-        padding: 0 20px;
+        justify-content: start;
+        padding: 80px 20px;
     }
 
     h1 {

@@ -11,7 +11,7 @@
         position: relative;
         bottom: 110px;
         background-color: #F5F5F7;
-        box-shadow: 0 6px 50px $black-25;
+        box-shadow: 0 6px 50px $black-10;
 
         @include media_tab_landscape {
             flex-wrap: wrap;

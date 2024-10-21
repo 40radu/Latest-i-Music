@@ -3,10 +3,11 @@
 .wrapper {
     @include flex (center, center, column);
     width: 100%;
-    p{
+
+    p {
         width: 100%;
-        border-bottom: 1px solid $black-25;
-        padding: 10px 0 ;
+        border-bottom: 1px solid $black-10;
+        padding: 10px 0;
     }
 
     .question {
@@ -27,7 +28,17 @@
         }
 
         &:hover {
-            background-color: $gray-35;
+            background-color: $black-02;
+        }
+
+        @media (hover : none) and (pointer : coarse) {
+            &:active {
+                background-color:$black-02;
+            }
+
+            &:not(:active) {
+                background-color: transparent;
+            }
         }
     }
 
@@ -37,6 +48,11 @@
         color: $black-40;
         letter-spacing: 0.9px;
         font-weight: 600;
+
+        padding: 0;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
 
         @include media_tab_portrait {
             font-size: 16px;

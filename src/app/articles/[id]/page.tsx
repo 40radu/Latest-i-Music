@@ -75,32 +75,35 @@ async function page({ params }: IParams) {
                     <p className={styles.price}>price : <span className={styles.number}>{price}.<span className={styles.lower}>00</span> $</span></p>
 
                     <div className={styles.container_button_add}>
-                        <Button className='third' value='Add to the cart' data={data[0]} />
+                        <Button className='primary' value='Add to the cart' data={data[0]} />
                     </div>
 
                     <div className={styles.advantageZone}>
                         <div className={styles.wrapper}>
-                            <IconShield height='30' width='30' strokeColor='#33c63a' />
+                            <IconShield height='30' width='30' strokeColor='rgb(28 220 28)' />
                             <p>
                                 article warranty :<span> 3 years</span>
                             </p>
                         </div>
                         <div className={styles.wrapper}>
-                            <IconDeliveryCar height='30' width='30' strokeColor='#33c63a' />
+                            <IconDeliveryCar height='30' width='30' strokeColor='rgb(28 220 28)' />
                             <p>
                                 delivery :<span> free of charge</span>
                             </p>
                         </div>
                         <div className={styles.wrapper}>
-                            <IconReference width='30' height='30' strokeColor='#33c63a' />
+                            <IconReference width='30' height='30' strokeColor='rgb(28 220 28)' />
                             <p>
                                 article warranty :<span> {id}</span>
                             </p>
                         </div>
                     </div>
 
-                    <p className={styles.descriItem}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est omnis dolorem voluptatum modi voluptates dolorum reiciendis, atque cum recusandae vel soluta? Praesentium eaque velit quisquam enim ipsa quidem vitae natus!</p>
-                    <Link href={`/articles/${category}`}>
+                    <p className={styles.descriItem}>{name} is an ideal instrument for musicians of all levels. Its ergonomic neck makes it
+                        comfortable to play, whether you're a beginner or a professional. With it's meticulous finish and classic design, it's the perfect
+                        accompaniment to all your musical moments
+                    </p>
+                    <Link href={`/articles/${category}`} className={styles.linkCategory}>
                         <Button className='fourthly' value='view similar' />
                     </Link>
                 </div>

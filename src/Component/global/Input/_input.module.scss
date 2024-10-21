@@ -30,5 +30,12 @@
             letter-spacing: text-space(18, 4);
             text-transform: capitalize;
         }
+
+        @include media_mobile {
+            font-size: 16px;
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
     }
 }

@@ -14,11 +14,8 @@
     }
 
     @include media_mobile { 
-        padding-left: 25px;
-        padding-right: 25px;
+        padding: 25px 25px 80px;
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        padding-bottom: 80px;
-
     }
 
     ;
@@ -27,7 +24,7 @@
 
     .descriZone {
         @apply w-fit h-fit flex flex-col;
-        row-gap: 12px;
+        row-gap: 10px;
         max-width: 500px;
         padding-top: 36px;
 
@@ -127,6 +124,11 @@
 
         .container_button_add {
             padding-top: 12px;
+        }
+
+        .linkCategory {
+            width: fit-content;
+            outline: none;
         }
     }
 }
