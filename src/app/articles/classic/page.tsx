@@ -19,7 +19,7 @@ async function page() {
     return (
         <section className={styles.container_article}>
             {data.map((element)=>{
-                return (<CardItem data={element} price={element.price} title={element.name} src={image} textButton='Add to the cart' />)
+                return (<CardItem promo={element.promo} data={element} price={element.price} title={element.name} src={image} textButton='Add to the cart' />)
             })}
         </section>
     )

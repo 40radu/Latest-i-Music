@@ -14,7 +14,7 @@ async function page() {
     return (
         <section className={styles.container_article}>
             {data.map((element) => {
-                return (<CardItem title={element.name} data={element} price={element.price} src={image} textButton='Add to the cart' />)
+                return (<CardItem promo={element.promo} title={element.name} data={element} price={element.price} src={image} textButton='Add to the cart' />)
             })}
         </section>
     )

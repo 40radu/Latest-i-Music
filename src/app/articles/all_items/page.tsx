@@ -25,18 +25,18 @@ async function AllItems() {
     <section className={styles.container_article}>
       {data.map((element) => {
         if (element.category === 'acoustic') {
-          return (<CardItem price={element.price} title={element.name} data={element} src={imageAcoustic} textButton='Add to the cart' />)
+          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageAcoustic} textButton='Add to the cart' />)
         }
         if (element.category === 'bass') {
-          return (<CardItem price={element.price} title={element.name} data={element} src={imageBass} textButton='Add to the cart' />)
+          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageBass} textButton='Add to the cart' />)
         } if (element.category === 'classic') {
-          return (<CardItem price={element.price} title={element.name} data={element} src={imageClassic} textButton='Add to the cart' />)
+          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageClassic} textButton='Add to the cart' />)
         } if (element.category === 'electric') {
-          return (<CardItem price={element.price} title={element.name} data={element} src={imageElectric} textButton='Add to the cart' />)
+          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageElectric} textButton='Add to the cart' />)
         } if (element.category === 'electro-acoustic') {
-          return (<CardItem price={element.price} title={element.name} data={element} src={imageElectroAcoustic} textButton='Add to the cart' />)
+          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageElectroAcoustic} textButton='Add to the cart' />)
         } if (element.category === 'ukulele') {
-          return (<CardItem price={element.price} title={element.name} data={element} src={imageUkulele} textButton='Add to the cart' />)
+          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageUkulele} textButton='Add to the cart' />)
         }
       })}
     </section>

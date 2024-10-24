@@ -14,7 +14,6 @@ import iconRemove from '../../../../Icons/remove.svg'
 import Image from 'next/image'
 import closeIcon from '../../../../Icons/close.svg'
 import gsap from 'gsap'
-import PromptPayment from '../ResponsePayment/ResponsePayment'
 import PaymentMethod from '../PaymentMethod/PaymentMethod'
 
 interface IBodyBasket {
@@ -168,6 +167,9 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
         }
     }, [articles.length])
 
+    
+
+
     return (
         <>
 
@@ -243,7 +245,7 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
                         <PaymentMethod name='Paypal' />
                     </ul>
 
-                    <input type="number" placeholder='Enter 9 numbers card' required name='number-code' className={styles.inputNumber} />
+                    <input type="number" placeholder='Enter card number' required name='number-code' className={styles.inputNumber} />
 
                     <div className={styles.containerBtn}>
                         {

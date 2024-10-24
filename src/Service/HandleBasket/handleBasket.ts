@@ -15,6 +15,7 @@ export interface IAdd {
     quantity?: number;
     price: number;
     category: 'bass' | 'acoustic' | 'electric' | 'electro-acoustic' | 'ukulele' | 'classic';
+    promo?: number
 };
 
 export interface IStoreBasket {
@@ -26,7 +27,8 @@ export interface IStoreBasket {
     getNumberProduct: () => number;
     changeQuantity: (idArticle: string, newQuantity: number) => void;
     getTotalPrice: () => number;
-    reset : ()=> void
+    reset: () => void;
+    getNewPrice: (idArticle: IAdd) => number
 
 }
 
@@ -36,12 +38,24 @@ export const useStoreBasket = create<IStoreBasket>()(
 
         basket: [],
 
+        getNewPrice(article) {
+            const initialPrice = article.price
+            if (article.promo) {
+                const promo = (initialPrice * article.promo) / 100
+                return (
+                    initialPrice - promo
+                )
+            } else {
+                return initialPrice 
+            }
+        },
+
         loadData: () => {
             const basket = localStorage.getItem('basket')
             if (basket) {
                 set({ basket: JSON.parse(basket) })
-            } else{
-                set({basket : []})
+            } else {
+                set({ basket: [] })
             }
         },
 
@@ -99,7 +113,7 @@ export const useStoreBasket = create<IStoreBasket>()(
                 total = total + (basket[i].quantity * basket[i].price)
             }
             return total
-        }, 
+        },
 
         reset() {
             get().save([])

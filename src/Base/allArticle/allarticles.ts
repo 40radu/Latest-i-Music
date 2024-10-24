@@ -3,7 +3,8 @@ export const dataAll = [
         id: '0a',
         price: 459,
         name: 'Yamaha C30MII',
-        category: 'acoustic'
+        category: 'acoustic',
+        promo  : 10
     },
     {
         id: '1a',

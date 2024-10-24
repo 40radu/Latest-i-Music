@@ -12,19 +12,20 @@ function CardItem({ title, price, src, promo, data }: ICardItem) {
 
     const router = useRouter()
     const storeBasket = useStoreBasket()
+    const newPrice = storeBasket.getNewPrice(data)
 
     function handleClick() {
         router.push(`/articles/${data.id}`)
     }
 
-    function addArticle (e : React.MouseEvent<HTMLButtonElement>) {
+    function addArticle(e: React.MouseEvent<HTMLButtonElement>) {
         e.stopPropagation()
         storeBasket.add(data)
     }
 
     return (
         <section className={styles.wrapper_card} onClick={handleClick} >
-            {promo && <div className={styles.promo}>-{promo}%</div>}
+            {/* {promo && <div className={styles.promo}>-{promo}%</div>} */}
 
             <div className={styles.containerImg}>
                 <Image src={src} alt='' className={styles.image} />
@@ -40,6 +41,7 @@ function CardItem({ title, price, src, promo, data }: ICardItem) {
                 <p className={styles.category}><span>*</span>{data.category}</p>
             </div>
             <p className={styles.price}>{price}.<span>00</span> $</p>
+            {/* {promo && <p>new price : {newPrice}</p>} */}
             <div className={styles.info}>
                 <p className={styles.stock}>In stock</p>
                 <p className={styles.delivery}>free delivery</p>

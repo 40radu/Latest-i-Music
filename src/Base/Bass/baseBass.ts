@@ -3,7 +3,8 @@ export const dataBass = [
         id: '0b',
         price: 459,
         name: 'Ibanez GSR200SM',
-        category : 'bass'
+        category : 'bass',
+        promo : 15
     },
     {
         id: '1b',

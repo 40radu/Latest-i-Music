@@ -3,7 +3,8 @@ export const dataClassic = [
         id: '0c',
         price: 429,
         name: 'Cordoba Iberia',
-        category : 'classic'
+        category : 'classic',
+        promo : 10
     },
     {
         id: '1c',
