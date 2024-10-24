@@ -13,30 +13,29 @@ import styles from '../_layoutArticle.module.scss'
 async function AllItems() {
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-  const res = await fetch(`${apiUrl}/api/allArticles`, { cache: 'no-store' })
+  const res = await fetch(`${apiUrl}/api/allArticles`, {next : {revalidate : 3600}})
   const allArticles = await res.json() as IArticle[]
   const shuffleArray = (array: IArticle[]) => {
     return array.sort(() => Math.random() - 0.5);
   };
 
   const data = shuffleArray(allArticles)
-  // console.log(shuffleArray(data))
   return (
     <section className={styles.container_article}>
-      {data.map((element) => {
+      {data.map((element , index) => {
         if (element.category === 'acoustic') {
-          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageAcoustic} textButton='Add to the cart' />)
+          return (<CardItem key={index} promo={element.promo} price={element.price} title={element.name} data={element} src={imageAcoustic} textButton='Add to the cart' />)
         }
         if (element.category === 'bass') {
-          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageBass} textButton='Add to the cart' />)
+          return (<CardItem key={index} promo={element.promo} price={element.price} title={element.name} data={element} src={imageBass} textButton='Add to the cart' />)
         } if (element.category === 'classic') {
-          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageClassic} textButton='Add to the cart' />)
+          return (<CardItem key={index} promo={element.promo} price={element.price} title={element.name} data={element} src={imageClassic} textButton='Add to the cart' />)
         } if (element.category === 'electric') {
-          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageElectric} textButton='Add to the cart' />)
+          return (<CardItem key={index} promo={element.promo} price={element.price} title={element.name} data={element} src={imageElectric} textButton='Add to the cart' />)
         } if (element.category === 'electro-acoustic') {
-          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageElectroAcoustic} textButton='Add to the cart' />)
+          return (<CardItem key={index} promo={element.promo} price={element.price} title={element.name} data={element} src={imageElectroAcoustic} textButton='Add to the cart' />)
         } if (element.category === 'ukulele') {
-          return (<CardItem  promo={element.promo} price={element.price} title={element.name} data={element} src={imageUkulele} textButton='Add to the cart' />)
+          return (<CardItem key={index} promo={element.promo} price={element.price} title={element.name} data={element} src={imageUkulele} textButton='Add to the cart' />)
         }
       })}
     </section>
