@@ -17,9 +17,18 @@
 
     button {
         transition: 0.25s ease;
+
         &:hover {
             scale: 0.95;
             transition: ease 0.25s;
+        }
+
+        &:disabled {
+            opacity: 0.75;
+
+            &:hover {
+                scale: 1;
+            }
         }
 
         @media (hover : none) and (pointer : coarse) {
@@ -226,11 +235,18 @@
         .inputNumber {
             width: 100%;
             @include flex (center, center, row);
-            height: 40px;
+            min-height: 40px;
             border: 1px solid $black-10;
             padding: 0 10px;
             letter-spacing: 0.9px;
 
+        }
+
+        .nbNumberCard {
+            @apply w-full justify-start items-center;
+            padding: 5px 10px;
+            font-size: 14px;
+            color: $red-83;
         }
 
         .containerBtn {

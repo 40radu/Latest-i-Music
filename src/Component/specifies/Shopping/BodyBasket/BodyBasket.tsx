@@ -32,6 +32,8 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
     const btnsConfirmation = useRef(null)
     const [hideBtnBuy, setHideBtnBuy] = useState<boolean>(true)
     const [hideBtnValidate, sethideBtnValidate] = useState<boolean>(true)
+    const [infoNumberCard, setInfoNumberCard] = useState<boolean>(false)
+    const [isValidateDisable, setIsValidateDisable] = useState<boolean>(true)
 
     function handleDelete(idArticle: string) {
 
@@ -97,7 +99,17 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
     }
 
     function seeBtnConfirmation() {
-
+        // const labelPayment = document.querySelectorAll('#labelPayment')
+        // const inputNumber = document.getElementById('inputNumber') as HTMLInputElement
+        // if (labelPayment) {
+        //     labelPayment.forEach((element)=>{
+        //         const label = element as HTMLLabelElement
+        //         label.style.pointerEvents = 'none'
+        //     })
+        // }
+        // if (inputNumber) {
+        //     inputNumber.style.pointerEvents = 'none'
+        // }
         sethideBtnValidate(false)
 
         gsap.to(btnsConfirmation.current, {
@@ -159,6 +171,19 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
         cancelPayement()
     }
 
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+        const value = e.target.value
+        if (value.length != 14) {
+            setInfoNumberCard(true)
+            setIsValidateDisable(true)
+            console.log('inferieur')
+        } else {
+            setInfoNumberCard(false)
+            setIsValidateDisable(false)
+            console.log('superieur')
+        }
+    }
+
     useEffect(() => {
         if (articles.length > 0) {
             setIsBtnDisable(false)
@@ -167,7 +192,7 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
         }
     }, [articles.length])
 
-    
+
 
 
     return (
@@ -207,7 +232,7 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
                                         <p><span className={styles.title}>reference</span> : {element.id}</p>
                                     </div>
 
-                                    <p className={styles.price}>{ element.promo ? storeBasket.getNewPrice(element.price , element.promo) : element.price} $</p>
+                                    <p className={styles.price}>{element.promo ? storeBasket.getNewPrice(element.price, element.promo) : element.price} $</p>
 
                                     <button onClick={() => { viewPromptRemove(element.id) }} className={styles.btn_remove}><Image src={iconRemove} alt='' title='remove' /></button>
 
@@ -245,16 +270,18 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
                         <PaymentMethod name='Paypal' />
                     </ul>
 
-                    <input type="number" placeholder='Enter card number' required name='number-code' className={styles.inputNumber} />
+                    <input id='inputNumber' type="number" onChange={handleChange} placeholder='Enter card number' required name='number-code' className={styles.inputNumber} />
+
+                    {infoNumberCard && <p className={styles.nbNumberCard}>NB : 14 digit numbers</p>}
 
                     <div className={styles.containerBtn}>
                         {
                             hideBtnValidate && <>
-                                <button type='submit' className={styles.btn_validate}>validate</button>
+                                <button type='submit' className={styles.btn_validate} disabled={isValidateDisable}>validate</button>
                             </>
                         }
 
-                        <button type='button' onClick={confirmPayment} className={styles.btn_confirm} ref={btnsConfirmation}> Confirm
+                        <button disabled={isValidateDisable} type='button' onClick={confirmPayment} className={styles.btn_confirm} ref={btnsConfirmation}> Confirm
                         </button>
 
                         <button type='button' onClick={cancelPayement} className={styles.btn_cancel}>cancel</button>
