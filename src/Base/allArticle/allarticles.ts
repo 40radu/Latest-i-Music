@@ -20,7 +20,8 @@ export const dataAll = [
         id: '3a',
         price: 430,
         name: 'Yamaha CX40',
-        category: 'acoustic'
+        category: 'acoustic',
+        promo  : 15
     }, {
         id: '4a',
         price: 499,
@@ -41,7 +42,8 @@ export const dataAll = [
         id: '7a',
         price: 401,
         name: 'Taylor 324ce',
-        category: 'acoustic'
+        category: 'acoustic',
+        promo  : 20
     }, {
         id: '8a',
         price: 439,
@@ -57,13 +59,15 @@ export const dataAll = [
         id: '0b',
         price: 459,
         name: 'Ibanez GSR200SM',
-        category: 'bass'
+        category: 'bass',
+        promo  : 15
     },
     {
         id: '1b',
         price: 448,
         name: 'Fender Jazz Bass',
-        category: 'bass'
+        category: 'bass',
+        promo  : 15
     }, {
         id: '2b',
         price: 455,
@@ -78,7 +82,8 @@ export const dataAll = [
         id: '4b',
         price: 499,
         name: 'Gibson Non-Reverse',
-        category: 'bass'
+        category: 'bass',
+        promo  : 20
     }, {
         id: '5b',
         price: 489,
@@ -110,7 +115,9 @@ export const dataAll = [
         id: '0c',
         price: 429,
         name: 'Cordoba Iberia',
-        category: 'classic'
+        category: 'classic',
+        promo  : 10
+
     },
     {
         id: '1c',
@@ -126,7 +133,9 @@ export const dataAll = [
         id: '3c',
         price: 330,
         name: 'Ortega R221BK',
-        category: 'classic'
+        category: 'classic',
+        promo  : 10
+
     }, {
         id: '4c',
         price: 499,
@@ -141,7 +150,9 @@ export const dataAll = [
         id: '6c',
         price: 450,
         name: 'Fender ESC',
-        category: 'classic'
+        category: 'classic',
+        promo  : 10
+
     },
     {
         id: '7c',
@@ -163,7 +174,9 @@ export const dataAll = [
         id: '0d',
         price: 429,
         name: 'Ibanez GRX70',
-        category: 'electric'
+        category: 'electric',
+        promo  : 10
+
     },
     {
         id: '1d',
@@ -184,7 +197,8 @@ export const dataAll = [
         id: '4d',
         price: 499,
         name: 'Charvel Pro',
-        category: 'electric'
+        category: 'electric',
+        promo  : 15
     }, {
         id: '5d',
         price: 789,
@@ -194,7 +208,9 @@ export const dataAll = [
         id: '6d',
         price: 450,
         name: 'Ibanez AZES4',
-        category: 'electric'
+        category: 'electric',
+        promo  : 10
+
     },
     {
         id: '7d',
@@ -211,7 +227,9 @@ export const dataAll = [
         id: '9d',
         price: 297,
         name: 'Ibanez PGMM11',
-        category: 'electric'
+        category: 'electric',
+        promo  : 10
+
     }, {
         id: '0e',
         price: 729,
@@ -227,7 +245,9 @@ export const dataAll = [
         id: '2e',
         price: 255,
         name: 'Taylor 914ce',
-        category: 'electro-acoustic'
+        category: 'electro-acoustic',
+        promo  : 10
+
     }, {
         id: '3e',
         price: 330,
@@ -242,7 +262,9 @@ export const dataAll = [
         id: '5e',
         price: 709,
         name: 'Gibson J45',
-        category: 'electro-acoustic'
+        category: 'electro-acoustic',
+        promo  : 10
+
     }, {
         id: '6e',
         price: 450,
@@ -264,13 +286,15 @@ export const dataAll = [
         id: '9e',
         price: 297,
         name: 'Martin OMJM',
-        category: 'electro-acoustic'
+        category: 'electro-acoustic',
+        promo  : 10
+
     }, {
         id: '0f',
         price: 119,
         name: 'PRODIPE BC25',
-        category: 'ukulele'
-
+        category: 'ukulele',
+        promo  : 10
     },
     {
         id: '1f',
@@ -282,7 +306,8 @@ export const dataAll = [
         id: '2f',
         price: 45,
         name: 'MAHALO MA1SKBK',
-        category: 'ukulele'
+        category: 'ukulele',
+        promo  : 15
 
     }, {
         id: '3f',
@@ -306,7 +331,8 @@ export const dataAll = [
         id: '6f',
         price: 45,
         name: 'KALA UK-FLAMINGO',
-        category: 'ukulele'
+        category: 'ukulele',
+        promo  : 15
 
     },
     {

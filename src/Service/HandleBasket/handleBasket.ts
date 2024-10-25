@@ -7,6 +7,7 @@ interface ISave {
     price: number;
     quantity: number;
     category: 'bass' | 'acoustic' | 'electric' | 'electro-acoustic' | 'ukulele' | 'classic'
+    promo?: number;
 };
 
 export interface IAdd {
@@ -28,7 +29,7 @@ export interface IStoreBasket {
     changeQuantity: (idArticle: string, newQuantity: number) => void;
     getTotalPrice: () => number;
     reset: () => void;
-    getNewPrice: (idArticle: IAdd) => number
+    getNewPrice: (price: number, promo: number) => number
 
 }
 
@@ -38,16 +39,10 @@ export const useStoreBasket = create<IStoreBasket>()(
 
         basket: [],
 
-        getNewPrice(article) {
-            const initialPrice = article.price
-            if (article.promo) {
-                const promo = (initialPrice * article.promo) / 100
-                return (
-                    initialPrice - promo
-                )
-            } else {
-                return initialPrice 
-            }
+        getNewPrice(price: number, promo: number) {
+            const value = (price * promo) / 100
+
+            return price - value
         },
 
         loadData: () => {
@@ -99,7 +94,6 @@ export const useStoreBasket = create<IStoreBasket>()(
                 foundProduct.quantity = foundProduct.quantity + newQuantity
                 get().save(basket)
                 if (foundProduct.quantity <= 0) {
-                    // get().remove(foundProduct.id)
                     foundProduct.quantity = 1
                     get().save(basket)
                 }
@@ -108,11 +102,20 @@ export const useStoreBasket = create<IStoreBasket>()(
 
         getTotalPrice() {
             let basket = get().basket;
+
             let total = 0;
             for (let i = 0; i < basket.length; i++) {
-                total = total + (basket[i].quantity * basket[i].price)
+
+                if (basket[i].promo) {
+                    const newPrice = get().getNewPrice(basket[i].price, basket[i].promo!)
+
+                    total = total + (basket[i].quantity * newPrice)
+                } else {
+                    total = total + (basket[i].quantity * basket[i].price)
+                }
+
             }
-            return total
+            return Math.round(total * 100) / 100;
         },
 
         reset() {

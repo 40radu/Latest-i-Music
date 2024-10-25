@@ -7,13 +7,33 @@
     position: fixed;
     background-color: $white;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     width: 350px;
     min-height: 500px;
     max-height: 90vh;
     top: 50%;
     padding: 10px;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.25);
+
+    button {
+        transition: 0.25s ease;
+        &:hover {
+            scale: 0.95;
+            transition: ease 0.25s;
+        }
+
+        @media (hover : none) and (pointer : coarse) {
+            &:active {
+                scale: 0.95;
+                transition: ease 0.25s;
+            }
+
+            &:not(:active) {
+                scale: 1;
+                transition: ease 0.25s;
+            }
+        }
+    }
 
     @include media_mobile {
         right: 0;
@@ -154,9 +174,10 @@
                         border: none;
                         color: $white;
                         background-color: #9aeb1d;
+                        width: fit-content;
                     }
 
-                    .btn_confirm {
+                    .btn_delete {
                         background-color: $red-83;
                     }
 
@@ -225,19 +246,18 @@
                 color: $white;
                 background-color: #9aeb1d;
                 text-transform: capitalize;
-                width: 117px;
-            }
-
-            .btn_validate {
-                background-color: $red-83;
+                width: 120px;
             }
 
             .btn_confirm {
-                background-color: $red-83;
                 width: 0;
                 height: 0;
                 opacity: 0;
                 pointer-events: none;
+            }
+
+            .btn_cancel {
+                background-color: $red-83;
             }
         }
     }

@@ -14,7 +14,8 @@ export const dataElectroAcoustic = [
         id: '2e',
         price: 255,
         name: 'Taylor 914ce',
-        category : 'electro-acoustic'
+        category : 'electro-acoustic',
+        promo : 10
     }, {
         id: '3e',
         price: 330,
@@ -29,7 +30,9 @@ export const dataElectroAcoustic = [
         id: '5e',
         price: 709,
         name: 'Gibson J45',
-        category : 'electro-acoustic'
+        category : 'electro-acoustic',
+        promo : 10
+
     }, {
         id: '6e',
         price: 450,
@@ -51,6 +54,8 @@ export const dataElectroAcoustic = [
         id: '9e',
         price: 297,
         name: 'Martin OMJM',
-        category : 'electro-acoustic'
+        category : 'electro-acoustic',
+        promo : 10
+
     },
 ]

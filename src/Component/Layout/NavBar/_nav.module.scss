@@ -79,6 +79,7 @@
                 letter-spacing: text-space(16, 14);
                 text-transform: uppercase;
                 color: $black-40;
+                transition: 0.25s ease-in-out;
 
                 &:hover {
                     scale: 0.97;

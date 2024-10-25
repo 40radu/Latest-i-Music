@@ -7,6 +7,7 @@ interface IData {
     quantity?: number;
     price: number;
     category: 'bass' | 'acoustic' | 'electric' | 'electro-acoustic' | 'ukulele' | 'classic';
+    promo? : number
 }
 
 export interface ICardItem {

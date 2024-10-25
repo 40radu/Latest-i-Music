@@ -10,7 +10,9 @@ export const dataBass = [
         id: '1b',
         price: 448,
         name: 'Fender Jazz Bass',
-        category : 'bass'
+        category : 'bass',
+        promo : 15
+
     }, {
         id: '2b',
         price: 455,
@@ -25,7 +27,9 @@ export const dataBass = [
         id: '4b',
         price: 499,
         name: 'Gibson Non-Reverse',
-        category : 'bass'
+        category : 'bass',
+        promo : 20
+
     }, {
         id: '5b',
         price: 489,

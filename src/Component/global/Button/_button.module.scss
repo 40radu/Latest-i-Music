@@ -14,6 +14,7 @@
     text-wrap: nowrap;
     @include flex(center, center, row);
     outline-color: #a699d3;
+    transition: 0.25s ease;
 
     &:disabled {
         color: $black-50;

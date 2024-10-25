@@ -20,7 +20,9 @@ export const dataClassic = [
         id: '3c',
         price: 330,
         name: 'Ortega R221BK',
-        category : 'classic'
+        category : 'classic',
+        promo : 10
+
     }, {
         id: '4c',
         price: 499,
@@ -35,7 +37,9 @@ export const dataClassic = [
         id: '6c',
         price: 450,
         name: 'Fender ESC',
-        category : 'classic'
+        category : 'classic',
+        promo : 10
+
     },
     {
         id: '7c',

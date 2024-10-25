@@ -1,0 +1,25 @@
+@import '../../../app/mixins';
+
+.price {
+    @apply flex justify-start items-center gap-x-3;
+    color: $black;
+
+    span {
+        font-weight: 600;
+    }
+
+    .new {
+        font-size: 21px;
+        color: $red-90;
+        font-weight: 700;
+    }
+
+    .older {
+        color: $black;
+        text-decoration: line-through;
+    }
+
+    .noPromo {
+        @extend .new;
+    }
+}

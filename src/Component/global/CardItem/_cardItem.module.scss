@@ -48,6 +48,8 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+            transition: 0.25s ease;
+
         }
 
         @include media_mobile {
@@ -125,15 +127,19 @@
     }
 
     .price {
-        font-size: 18px;
+        @apply flex w-full justify-start items-center gap-x-3;
+        color: black;
+        letter-spacing: 1px;
         font-weight: 600;
-        letter-spacing: 0.9px;
-        color: $black;
 
-        span {
+        .older {
             font-size: 14px;
+            text-decoration: line-through;
+            color: $red;
         }
     }
+
+
 
     .info {
         width: 100%;

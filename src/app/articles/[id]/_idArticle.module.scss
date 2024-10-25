@@ -67,26 +67,6 @@
             }
         }
 
-        .price {
-            font-size: 16px;
-            font-weight: 500;
-            color: $black;
-            text-transform: capitalize;
-            width: fit-content;
-            @include flex(start, center, row);
-            column-gap: 20px;
-
-            .number {
-                font-size: 25px;
-                font-weight: 700;
-                color: $red-secondary;
-
-                .lower {
-                    font-size: 22px
-                }
-            }
-        }
-
         .advantageZone {
             @apply w-fit h-fit flex flex-col;
             row-gap: 12px;
@@ -123,7 +103,7 @@
         }
 
         .container_button_add {
-            padding-top: 4px;
+            padding-top: 8px;
         }
 
         .linkCategory {

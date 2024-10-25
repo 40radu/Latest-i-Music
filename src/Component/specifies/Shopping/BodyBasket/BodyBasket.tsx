@@ -207,14 +207,14 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
                                         <p><span className={styles.title}>reference</span> : {element.id}</p>
                                     </div>
 
-                                    <p className={styles.price}>{element.price} $</p>
+                                    <p className={styles.price}>{ element.promo ? storeBasket.getNewPrice(element.price , element.promo) : element.price} $</p>
 
                                     <button onClick={() => { viewPromptRemove(element.id) }} className={styles.btn_remove}><Image src={iconRemove} alt='' title='remove' /></button>
 
                                     <div id={element.id} className={styles.prompt_delete} >
                                         <p className={styles.question}>Remove article ?</p>
                                         <div className={styles.wrapper_buttons}>
-                                            <button onClick={() => { handleDelete(element.id) }} className={styles.btn_confirm}>Confirm</button>
+                                            <button onClick={() => { handleDelete(element.id) }} className={styles.btn_delete}>Delete</button>
                                             <button onClick={hidePromptRemove}>Cancel</button>
                                         </div>
                                     </div>
@@ -253,13 +253,11 @@ function BodyBasket({ closeBasket, viewPromptPayment }: IBodyBasket) {
                                 <button type='submit' className={styles.btn_validate}>validate</button>
                             </>
                         }
-                        {/* <div className={styles.wrapperConfirmation} ref={btnsConfirmation} id='confirmation'> */}
 
                         <button type='button' onClick={confirmPayment} className={styles.btn_confirm} ref={btnsConfirmation}> Confirm
                         </button>
 
-                        {/* </div> */}
-                        <button type='button' onClick={cancelPayement}>cancel</button>
+                        <button type='button' onClick={cancelPayement} className={styles.btn_cancel}>cancel</button>
                     </div>
 
                 </form>

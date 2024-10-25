@@ -14,6 +14,7 @@ import Link from 'next/link'
 import IconShield from '@/Component/Icons/IconShield'
 import IconReference from '@/Component/Icons/IconReference'
 import IconDeliveryCar from '@/Component/Icons/IconDeliveryCar'
+import PriceArticle from '@/Component/Articles/PriceArticle/PriceArticle'
 
 // export const revalidate = 60
 
@@ -58,7 +59,7 @@ interface IParams {
 async function page({ params }: IParams) {
 
     const data = await getData(params.id)
-    const { id, price, name, category } = data[0]
+    const { id, price, name, category, promo } = data[0]
 
     return (
         <>
@@ -72,7 +73,7 @@ async function page({ params }: IParams) {
                         <p className={styles.category}>({category})</p>
                     </div>
 
-                    <p className={styles.price}>price : <span className={styles.number}>{price}.<span className={styles.lower}>00</span> $</span></p>
+                    <PriceArticle price={price} promo={promo} />
 
                     <div className={styles.container_button_add}>
                         <Button className='primary' value='Add to the cart' data={data[0]} />

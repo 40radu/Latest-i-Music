@@ -23,7 +23,8 @@ export const dataAcoustic = [
         id: '3a',
         price: 430,
         name: 'Yamaha CX40',
-        category: 'acoustic'
+        category: 'acoustic',
+        promo : 15
     },
     {
         id: '4a',
@@ -48,7 +49,8 @@ export const dataAcoustic = [
         id: '7a',
         price: 401,
         name: 'Taylor 324ce',
-        category: 'acoustic'
+        category: 'acoustic',
+        promo : 20
     },
     {
         id: '8a',

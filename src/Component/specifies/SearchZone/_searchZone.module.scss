@@ -9,6 +9,8 @@
             padding: 5px;
             display: block;
             border-radius: 50%;
+            transition: 0.25s ease;
+
         }
 
         .image {
@@ -17,8 +19,10 @@
         }
 
         &:hover {
+
             .labelSearch {
                 background-color: $black-05;
+                transition: 0.25s ease;
             }
 
             .image {

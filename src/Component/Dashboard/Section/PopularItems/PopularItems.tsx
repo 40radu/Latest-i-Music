@@ -38,12 +38,13 @@ function PopularItems({ title }: { title?: 'new products' }) {
                     1441: { slidesPerView: 5 }
 
                 }}
-
-
             >
                 <SwiperSlide className="wrapperItems">
                     <CardItem price={548} src={imgElectricArticle} title='Gibson SG' textButton='view similar' data={{ id: '1d', price: 548, name: 'Gibson SG', category: 'electric' }} />
                 </SwiperSlide >
+                <SwiperSlide className="wrapperItems">
+                    <CardItem price={45} src={imgUkulele} promo={15} title='MAHALO MA1SKBK' textButton='view similar' data={{ id: '2f', price: 45, name: 'MAHALO MA1SKBK', category: 'ukulele', promo: 15 }} />
+                </SwiperSlide>
                 <SwiperSlide className="wrapperItems">
                     <CardItem price={499} src={imgAcoustic} title='Martin D 41L LH' textButton='view similar' data={{ id: '4a', price: 499, name: 'Martin LX1L', category: 'acoustic' }} />
                 </SwiperSlide ><SwiperSlide className="wrapperItems">
@@ -53,10 +54,7 @@ function PopularItems({ title }: { title?: 'new products' }) {
                     <CardItem price={330} src={imgElectricArticle} title='Ibanez Q54' textButton='view similar' data={{ id: '3d', price: 330, name: 'Ibanez Q54', category: 'electric' }} />
                 </SwiperSlide>
                 <SwiperSlide className="wrapperItems">
-                    <CardItem price={45} src={imgUkulele} title='MAHALO MA1SKBK' textButton='view similar' data={{ id: '2f', price: 45, name: 'MAHALO MA1SKBK', category: 'ukulele' }} />
-                </SwiperSlide>
-                <SwiperSlide className="wrapperItems">
-                    <CardItem price={430} src={imgAcoustic} title='Yamaha CX40' textButton='view similar' data={{ id: '3a', price: 430, name: 'Yamaha CX40', category: 'acoustic' }} />
+                    <CardItem price={430} src={imgAcoustic} title='Yamaha CX40' textButton='view similar' promo={15} data={{ id: '3a', price: 430, name: 'Yamaha CX40', category: 'acoustic', promo: 15 }} />
                 </SwiperSlide><SwiperSlide className="wrapperItems">
                     <CardItem price={489} src={imgBass} title='Yamaha TRBX174   ' textButton='view similar' data={{ id: '5b', price: 489, name: 'Yamaha TRBX174', category: 'bass' }} />
                 </SwiperSlide>

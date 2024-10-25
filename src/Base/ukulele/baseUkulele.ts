@@ -3,7 +3,9 @@ export const dataUkulele = [
         id: '0f',
         price: 119,
         name: 'PRODIPE BC25',
-        category : 'ukulele'
+        category : 'ukulele',
+        promo : 10
+
     },
     {
         id: '1f',
@@ -14,7 +16,9 @@ export const dataUkulele = [
         id: '2f',
         price: 45,
         name: 'MAHALO MA1SKBK',
-        category : 'ukulele'
+        category : 'ukulele',
+        promo : 15
+
     }, {
         id: '3f',
         price: 33,
@@ -34,7 +38,8 @@ export const dataUkulele = [
         id: '6f',
         price: 45,
         name: 'KALA UK-FLAMINGO',
-        category : 'ukulele'
+        category : 'ukulele',
+        promo : 15
     },
     {
         id: '7f',
