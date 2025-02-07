@@ -15,6 +15,18 @@
     @include flex(center, center, row);
     outline-color: #a699d3;
     transition: 0.25s ease;
+    @apply flex;
+
+    p {
+        @apply overflow-hidden flex w-fit h-fit relative;
+    }
+
+    span {
+        &:nth-child(1) {
+            transform: translateX(-100%);
+            position: absolute;
+        }
+    }
 
     &:disabled {
         color: $black-50;
@@ -22,13 +34,22 @@
         background-color: transparent;
 
         &:hover {
-           scale: 1;
+            scale: 1;
         }
     }
 
     &:hover {
-       scale: 0.95;
-       transition: 0.25s ease;
+        p span {
+            &:nth-child(1) {
+                transform: translateX(0%);
+                transition: 0.25s ease-in-out;
+                transition-delay: 0.1s;
+            }
+            &:nth-child(2){
+                transform: translateX(100%);
+                transition: 0.3s ease-in-out;
+            }
+        }
     }
 
     &:active {
