@@ -4,8 +4,6 @@
 import React from 'react'
 import styles from './_idArticle.module.scss'
 import Button from '@/Component/global/Button/page'
-import carIcn from '../../../Icons/car.svg'
-import Image from 'next/image'
 import ImageZone from './ImageZone/ImageZone'
 import { IArticle } from '../typeBass'
 import { notFound } from 'next/navigation'
@@ -40,25 +38,12 @@ async function getData(id: string) {
 }
 
 interface IParams {
-    params: {
-        id: string
-    }
+    params: Promise<{ id: string }>
 }
 
-// const products = [
-//     {
-//         label: "first product",f
-//         icon: ShieldIcon
-//     },
-//     {
-//         label: "second product",
-//         icon: ShieldIcon
-//     },
-// ]
-
 async function page({ params }: IParams) {
-
-    const data = await getData(params.id)
+    const ids = (await params).id
+    const data = await getData(ids)
     const { id, price, name, category, promo } = data[0]
 
     return (

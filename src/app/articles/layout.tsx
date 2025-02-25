@@ -16,8 +16,8 @@ function ArticleLayourt({
 }>) {
     return (
         <div>
-            {/* <NavArticle /> */}
-                {/* {children} */}
+            <NavArticle />
+                {children}
         </div>
     )
 }
