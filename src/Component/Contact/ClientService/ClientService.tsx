@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './_clientService.module.scss'
+import styles from './clientService.module.scss'
 import Image from 'next/image'
 import customerIc from '../../../Icons/customer_service.svg'
 import IconEmail from '@/Component/Icons/IconEmail';

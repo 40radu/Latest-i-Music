@@ -88,14 +88,9 @@
             background-image: url('/arrowRight.svg');
             background-repeat: no-repeat;
             background-size: 65%;
-
             &::after {
                 content: '';
             }
-
-
-            background-repeat: no-repeat;
-
             @include media_desktop {
                 right: 15px;
                 background-size: 50%;

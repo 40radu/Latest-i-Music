@@ -25,11 +25,11 @@ $green-secondary : #33c63a;
 
 $breakpoints : ("desktop" : 1280px, "laptop": 1024px, "tab_landscape" : 992px, "tab_portrait" : 768px, "mobile":480px);
 
-@function text-space ($sizeValue, $valueP) {
-    @return ((($sizeValue * $valueP)/100)*1px)
-}
+// @function text-space ($sizeValue, $valueP) {
+//     @return ((($sizeValue * $valueP)/100)*1px)
+// }
 
-;
+// ;
 
 @mixin flex ($content, $items, $direction) {
     display: flex;

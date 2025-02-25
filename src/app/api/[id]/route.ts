@@ -5,8 +5,9 @@ interface IParams {
     id : string
 }
 
-export async function GET(request : Request , {params} : {params : IParams}) {
-        const allData = dataAll
-        const article = allData.filter((element)=>(element.id == params.id))
-        return NextResponse.json(article)
+export async function GET(request : Request, props: {params : Promise<IParams>}) {
+    const params = await props.params;
+    const allData = dataAll
+    const article = allData.filter((element)=>(element.id == params.id))
+    return NextResponse.json(article)
 }
