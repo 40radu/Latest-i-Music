@@ -47,7 +47,7 @@ interface IParams {
 
 // const products = [
 //     {
-//         label: "first product",
+//         label: "first product",f
 //         icon: ShieldIcon
 //     },
 //     {
